@@ -1,0 +1,22 @@
+{
+    "name": "O Protetor",
+    "short_name": "O Protetor",
+    "icons": [
+      {
+        "src": "/img/icon-192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/img/icon-512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "theme_color": "#000000",
+    "background_color": "#FFFFFF",
+    "description": "O Protetor - A tranquilidade que você precisa, sempre a mão",
+    "start_url": "/",
+    "display": "fullscreen",
+    "orientation": "portrait"
+  }
