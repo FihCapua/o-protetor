@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import styles from './page.module.css'
 
 export default function Home() {
@@ -12,7 +13,7 @@ export default function Home() {
       </div>
 
       <div className={styles.grid}>
-        <p>Teste</p>
+        <Link href={'/register'} className={styles.card}>Registrar-se</Link>
       </div>
     </main>
   )
