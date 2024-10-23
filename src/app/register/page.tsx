@@ -3,49 +3,55 @@
 import { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase/firebaseConfig"
+import { Button, Container, ErrorMessage, Form, Input, Label, SuccessMessage, Title } from "./style";
 
 const AuthClient = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
+    const [message, setMessage] = useState('');
 
     const handleAuthRegister = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
         try {
             await createUserWithEmailAndPassword(auth, email, password);
-            console.log("Usuário criado com sucesso!");
+            console.log("Usuário registrado com sucesso!", auth, email, password);
+            setMessage('Usuário registrado com sucesso!');
+            setEmail('');
+            setPassword('');
         } catch (error: Error | any) {
-            setError(error.message);
+            setError(`Erro ao registrar o usuário: ${error.message}`);
+            setEmail('');
+            setPassword('');
         }
     }
 
     return (
-        <div>
-          <h1>Registrar-se</h1>
-          <form onSubmit={handleAuthRegister}>
-            <div>
-              <label>Email:</label>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-            </div>
-            <div>
-              <label>Senha:</label>
-              <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-              />
-            </div>
-            {error && <p>{error}</p>}
-            <button type="submit">Registrar</button>
-          </form>
-        </div>
+      <Container>
+      <Title>Registrar-se</Title>
+      <Form onSubmit={handleAuthRegister}>
+        <Label htmlFor="email">Email:</Label>
+        <Input
+          id="email"
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <Label htmlFor="password">Senha:</Label>
+        <Input
+          id="password"
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+        {error && <ErrorMessage>{error}</ErrorMessage>}
+        {message && <SuccessMessage>{message}</SuccessMessage>}
+        <Button type="submit">Registrar</Button>
+      </Form>
+    </Container>
       );
 }
 
