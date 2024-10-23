@@ -2,17 +2,14 @@
 
 import { useEffect } from "react";
 import { useAuth } from "@/providers/AuthProvider";
-import { useRouter } from "next/router";
+import { redirect } from "next/navigation";
 
 const Dashboard = () => {
     const { user, logout } = useAuth();
-    const router = useRouter();
 
-    useEffect(() => {
         if (!user) {
-        router.push("/login")
+            redirect("/login")
         }
-    }, [user, router]);
 
     if (!user) return <p>Carregando...</p>
 

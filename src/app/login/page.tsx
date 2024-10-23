@@ -1,28 +1,39 @@
 'use client'
 
-import { useState } from 'react';
-import { signInWithEmailAndPassword } from 'firebase/auth';
+import { useEffect, useState } from 'react'
+import { redirect } from 'next/navigation'
+import { signInWithEmailAndPassword } from 'firebase/auth'
 import { auth } from "../firebase/firebaseConfig"
-import { Button, Container, ErrorMessage, Form, Input, Label, SuccessMessage, Title } from './style';
+import { useAuth } from '@/providers/AuthProvider'
+import { Button, Container, ErrorMessage, Form, Input, Label, SuccessMessage, Title } from './style'
 
 const Login = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [error, setError] = useState('');
-    const [message, setMessage] = useState('');
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [error, setError] = useState('')
+    const [message, setMessage] = useState('')
+    const { user } = useAuth()
+
+      if (user) {
+        redirect("/dashboard")
+      }
   
     const handleLogin = async (event: React.FormEvent<HTMLFormElement>) => {
-      event.preventDefault();
-      setError('');
-      setMessage('');
+      event.preventDefault()
+      setError('')
+      setMessage('')
   
       try {
-        await signInWithEmailAndPassword(auth, email, password);
-        setMessage('Login realizado com sucesso!');
+        await signInWithEmailAndPassword(auth, email, password)
+        setMessage('Login realizado com sucesso!')
       } catch (error: Error | any) {
-        setError('Erro ao fazer login: ' + error.message);
+        setError('Erro ao fazer login: ' + error.message)
       }
-    };
+    }
+
+    if (user) {
+      return null
+    }
   
     return (
       <Container>
@@ -49,7 +60,7 @@ const Login = () => {
           <Button type="submit">Entrar</Button>
         </Form>
       </Container>
-    );
-  };
-  
-  export default Login;
+    )
+}
+
+export default Login

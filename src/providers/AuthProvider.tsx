@@ -20,9 +20,8 @@ export const AuthProvider = ({ children }: {children: React.ReactNode}) => {
         return () => unsubscribe()
     }, [])
 
-    const logout = () => {
-        signOut(auth)
-        setUser(null)
+    const logout = async () => {
+        await signOut(auth)
     }
 
     return (
