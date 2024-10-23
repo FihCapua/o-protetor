@@ -46,7 +46,7 @@ export const ErrorMessage = styled.div`
     padding: 8px;
     margin-bottom: 10px;
     width: 100%;
-    height: 30px;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,7 +60,7 @@ export const SuccessMessage = styled.div`
     padding: 8px;
     margin-bottom: 10px;
     width: 100%;
-    height: 30px;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
