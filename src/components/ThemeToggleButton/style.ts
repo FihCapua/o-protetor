@@ -1,5 +1,12 @@
 import styled from 'styled-components';
 
+export const ThemedButtonContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  width: 100%;
+`;
+
 export const ThemedButton = styled.button`
   background-color: ${({ theme }) => theme.colors.buttonBackground};
   color: ${({ theme }) => theme.colors.buttonText};

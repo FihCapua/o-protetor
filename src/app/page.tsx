@@ -1,20 +1,26 @@
-import Link from 'next/link'
-import styles from './page.module.css'
+'use client'
+
+import { Image } from '@/components/Image'
+import Link from '@/components/Link'
+import Logo from '../../public/assets/images/logo-o-protetor.svg'
+import { Container, LinkComponent } from './style'
+import { TextComponent, TitleComponent } from '@/components/Typography'
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-          <h1>O Protetor</h1>
+    <Container>
+      <div>
+        <Image src={Logo} alt="O Protetor" width={350} height={400} />
+          <TitleComponent as='h1'>O Protetor</TitleComponent>
       </div>
 
-      <div className={styles.center}>
-        <p>A tranquilidade que você precisa, sempre a mão</p>
+      <div>
+        <TextComponent as='p'>A tranquilidade que você precisa, sempre a mão</TextComponent>
       </div>
 
-      <div className={styles.grid}>
-        <Link href={'/register'} className={styles.card}>Registrar-se</Link>
-      </div>
-    </main>
+      <LinkComponent>
+        <Link href={'/register'}>Registrar-se</Link>
+      </LinkComponent>
+    </Container>
   )
 }
