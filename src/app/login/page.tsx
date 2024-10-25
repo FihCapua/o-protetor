@@ -45,7 +45,7 @@ const Login = () => {
             id="email"
             type="email"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(event: React.ChangeEvent<HTMLInputElement>) => setEmail(event.target.value)}
             required
           />
           <Label htmlFor="password">Senha:</Label>
@@ -53,7 +53,7 @@ const Login = () => {
             id="password"
             type="password"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(event: React.ChangeEvent<HTMLInputElement>) => setEmail(event.target.value)}
             required
           />
           {error && <ErrorMessage>{error}</ErrorMessage>}

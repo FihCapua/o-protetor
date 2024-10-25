@@ -3,7 +3,8 @@
 import { useEffect, useState } from "react";
 import { getContacts } from "@/services/contactService";
 import { ContactProps } from "@/types";
-import { TitleComponent } from "../Typography";
+import { TextComponent, TitleComponent } from "../Typography";
+import { ListContactsContainer, ListDetailsContainer } from "./style";
 
 const ContactList = () => {
     const [contacts, setContacts] = useState<ContactProps[]>([]);
@@ -17,16 +18,20 @@ const ContactList = () => {
     }, []);
 
     return (
-        <div>
-            <TitleComponent as="h3">Contatos de Emergência</TitleComponent>
-            <ul>
-                {contacts.map((contact) => (
-                    <li key={contact.id}>
-                        {contact.name} - {contact.email} - {contact.phone}
-                    </li>
-                ))}
-            </ul>
-        </div>
+        <ListContactsContainer>
+            <TitleComponent as="h3">Contatos de Emergência: </TitleComponent>
+            <ListDetailsContainer>
+                <ul>
+                    {contacts.map((contact) => (
+                        <li key={contact.id}>
+                            <TextComponent> - Nome: {contact.name}</TextComponent>
+                            <TextComponent> - Email: {contact.email}</TextComponent>
+                            <TextComponent> - Telefone: {contact.phone}</TextComponent>
+                        </li>
+                    ))}
+                </ul>
+            </ListDetailsContainer>
+        </ListContactsContainer>
     );
 };
 
