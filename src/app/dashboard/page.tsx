@@ -1,55 +1,48 @@
 'use client'
 
-import { useEffect } from "react";
-import { useAuth } from "@/providers/AuthProvider";
-import { redirect } from "next/navigation";
-import { Block, Button, Container, FullWidthBlock } from "./style";
+import { Block, Container, FullWidthBlock } from "./style";
+import { Title } from "../login/style";
+import ProtectedRoute from "@/components/ProtectedRoute";
+import Header from "@/components/Header";
+import { Text } from "@/components/Typography/style";
+import { ButtonComponent } from "@/components/Button";
 
 const Dashboard = () => {
-    const { user, logout } = useAuth();
-
-        if (!user) {
-            redirect("/login")
-        }
-
-    if (!user) return <p>Carregando...</p>
-
     return (
-        <>
-            <h1>Olá, seja bem-vindo, {user.email}!</h1>
-            <button onClick={logout}>Logout</button>
+        <ProtectedRoute>
+            <Header />
             <Container>
                 <Block>
-                    <h2>Botão de Emergência</h2>
-                    <p>Envie sua localização para contatos de emergência com um clique.</p>
-                    <Button>Enviar localização</Button>
+                    <Title as="h2">Botão de Emergência</Title>
+                    <Text as="p">Envie sua localização para contatos de emergência com um clique.</Text>
+                    <ButtonComponent size="small" fullWidth>Enviar localização</ButtonComponent>
                 </Block>
 
                 <Block>
-                    <h2>Contatos de Emergência</h2>
-                    <p>Tenha acesso rápido a seus contatos de emergência.</p>
-                    <Button>Ver Contatos</Button>
+                    <Title as="h2">Contatos de Emergência</Title>
+                    <Text as="p">Tenha acesso rápido a seus contatos de emergência.</Text>
+                    <ButtonComponent size="small" fullWidth>Ver Contatos</ButtonComponent>
                 </Block>
 
                 <Block>
-                    <h2>Minhas medicações</h2>
-                    <p>Programe lembretes para tomar seus medicamentos no horário certo.</p>
-                    <Button>Adicionar Lembrete</Button>
+                    <Title as="h2">Minhas medicações</Title>
+                    <Text as="p">Programe lembretes para tomar seus medicamentos no horário certo.</Text>
+                    <ButtonComponent size="small" fullWidth>Adicionar Lembrete</ButtonComponent>
                 </Block>
 
                 <Block>
-                    <h2>Dicas de Segurança Diárias</h2>
-                    <p>Receba dicas diárias para garantir sua segurança e bem-estar.</p>
-                    <Button>Ver Dicas</Button>
+                    <Title as="h2">Dicas de Segurança Diárias</Title>
+                    <Text as="p">Receba dicas diárias para garantir sua segurança e bem-estar.</Text>
+                    <ButtonComponent size="small" fullWidth>Ver Dicas</ButtonComponent>
                 </Block>
 
                 <FullWidthBlock>
-                    <h2>Jogos que estimulam a mente</h2>
-                    <p>Estimule agora sua mente com jogos que ajudam na memória e cognição.</p>
-                    <Button>Jogar Agora</Button>
+                    <Title as="h2">Jogos que estimulam a mente</Title>
+                    <Text as="p">Estimule agora sua mente com jogos que ajudam na memória e cognição.</Text>
+                    <ButtonComponent size="small" fullWidth>Jogar Agora</ButtonComponent>
                 </FullWidthBlock>
             </Container>
-        </>
+        </ProtectedRoute>
     );
 };
 

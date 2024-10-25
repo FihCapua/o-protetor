@@ -10,35 +10,26 @@ export const Container = styled.div`
 `
 
 export const Block = styled.div`
-background-color: #f0f0f0;
-color: #333;
-border-radius: 12px;
-padding: 20px;
-flex: 1 1 45%; 
-min-height: 150px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-text-align: center;
+  background-color: ${({ theme }) => theme.colors.background};
+  color: ${({ theme }) => theme.colors.primaryText}; 
+  border-radius: ${({ theme }) => theme.borderRadius};
+  padding: 20px;
+  flex: 1 1 45%; 
+  min-height: 150px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
 
-@media (max-width: 768px) {
-  flex: 1 1 100%;
-}
+  // Estilos dinâmicos adicionais para hover
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.highlightText};
+    color: ${({ theme }) => theme.colors.buttonText};
+  }
+
+  @media (max-width: 768px) {
+    flex: 1 1 100%;
+  }
 `;
 
 export const FullWidthBlock = styled(Block)`
   flex: 1 1 100%;
-`;
-
-export const Button = styled.button`
-padding: 15px 20px;
-font-size: 1.5rem;
-background-color: #0070f3;
-color: white;
-border: none;
-border-radius: 8px;
-cursor: pointer;
-margin-top: 10px;
-
-&:hover {
-  background-color: #005bb5;
-}
 `;
