@@ -41,3 +41,19 @@ export interface ButtonProps {
     children: React.ReactNode
     onClick?: () => void
 }
+
+export interface ContactProps {
+    id: string;
+    name: string;
+    email: string;
+    phone: string;
+}
+
+export interface InputFieldProps {
+    label?: string;
+    type?: string;
+    value: string;
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    placeholder?: string;
+    required?: boolean;
+}
