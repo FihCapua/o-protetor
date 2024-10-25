@@ -19,10 +19,9 @@ export const Block = styled.div`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
 
-  // Estilos dinâmicos adicionais para hover
-  &:hover {
-    background-color: ${({ theme }) => theme.colors.highlightText};
-    color: ${({ theme }) => theme.colors.buttonText};
+  a {
+    text-decoration: none;
+    color: ${({ theme }) => theme.colors.highlightText};
   }
 
   @media (max-width: 768px) {

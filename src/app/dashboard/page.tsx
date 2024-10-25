@@ -6,8 +6,11 @@ import ProtectedRoute from "@/components/ProtectedRoute";
 import Header from "@/components/Header";
 import { Text } from "@/components/Typography/style";
 import { ButtonComponent } from "@/components/Button";
+import { EmergencyButton } from "@/components/EmergencyButton";
+import Link from "@/components/Link";
 
 const Dashboard = () => {
+
     return (
         <ProtectedRoute>
             <Header />
@@ -15,13 +18,18 @@ const Dashboard = () => {
                 <Block>
                     <Title as="h2">Botão de Emergência</Title>
                     <Text as="p">Envie sua localização para contatos de emergência com um clique.</Text>
-                    <ButtonComponent size="small" fullWidth>Enviar localização</ButtonComponent>
+                    <EmergencyButton />
                 </Block>
 
                 <Block>
                     <Title as="h2">Contatos de Emergência</Title>
                     <Text as="p">Tenha acesso rápido a seus contatos de emergência.</Text>
-                    <ButtonComponent size="small" fullWidth>Ver Contatos</ButtonComponent>
+                    <ButtonComponent size="small" fullWidth>
+                        <Link href="/list-contact">Ver Contatos</Link>
+                    </ButtonComponent>
+                    <ButtonComponent size="small" fullWidth>
+                        <Link href="/new-contact">Cadastrar Contato</Link>
+                    </ButtonComponent>
                 </Block>
 
                 <Block>
