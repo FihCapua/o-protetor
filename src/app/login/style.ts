@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   max-width: 400px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 25px;
 `;
 
 export const Title = styled.h1`
@@ -25,19 +25,6 @@ export const Input = styled.input`
   margin-bottom: 10px;
   width: 100%;
   font-size: 16px;
-`;
-
-export const Button = styled.button`
-  padding: 10px 15px;
-  background-color: #0070f3;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-
-  &:hover {
-    background-color: #005bb5;
-  }
 `;
 
 export const ErrorMessage = styled.div`

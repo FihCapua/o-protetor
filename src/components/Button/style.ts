@@ -5,10 +5,7 @@ export const Button = styled.button<ButtonProps>`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${({ variant, theme }) => 
-    variant === 'secondary' 
-        ? theme.colors.highlightText
-        : theme.colors.buttonBackground};
+  background-color: ${({ theme }) => theme.colors.buttonBackground};
   color: ${({ theme }) => theme.colors.buttonText};
   padding: ${({ size, theme }) => {
     switch (size) {
@@ -35,4 +32,5 @@ export const Button = styled.button<ButtonProps>`
   cursor: pointer;
   width: ${({ fullWidth }) => (fullWidth ? '100%' : '180px')};
   height: 35px;
+  margin-bottom: ${({ theme }) => theme.spacing.medium};
 `;

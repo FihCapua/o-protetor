@@ -23,7 +23,7 @@ export const Title = styled.h1<TitleProps>`
   text-align: center;
   font-weight: bold;
   color: ${({ theme }) => theme.colors.highlightText};
-  margin: 0;
+  margin: 0 0 ${({ theme }) => theme.spacing.medium} 0;
   padding: 0;
 `;
 

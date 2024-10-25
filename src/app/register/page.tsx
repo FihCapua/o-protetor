@@ -3,7 +3,9 @@
 import { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase/firebaseConfig"
-import { Button, Container, ErrorMessage, Form, Input, Label, SuccessMessage, Title } from "./style";
+import { TitleComponent } from "@/components/Typography";
+import { Container, ErrorMessage, Form, Input, Label, SuccessMessage } from "./style";
+import { ButtonComponent } from "@/components/Button";
 
 const AuthClient = () => {
     const [email, setEmail] = useState("");
@@ -29,7 +31,7 @@ const AuthClient = () => {
 
     return (
       <Container>
-      <Title>Registrar-se</Title>
+      <TitleComponent as="h1">Registrar-se</TitleComponent>
       <Form onSubmit={handleAuthRegister}>
         <Label htmlFor="email">Email:</Label>
         <Input
@@ -49,7 +51,7 @@ const AuthClient = () => {
         />
         {error && <ErrorMessage>{error}</ErrorMessage>}
         {message && <SuccessMessage>{message}</SuccessMessage>}
-        <Button type="submit">Registrar</Button>
+        <ButtonComponent fullWidth size="small">Registrar-se</ButtonComponent>
       </Form>
     </Container>
       );

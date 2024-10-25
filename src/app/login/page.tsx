@@ -5,7 +5,8 @@ import { redirect } from 'next/navigation'
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import { auth } from "../firebase/firebaseConfig"
 import { useAuth } from '@/providers/AuthProvider'
-import { Button, Container, ErrorMessage, Form, Input, Label, SuccessMessage, Title } from './style'
+import { Container, ErrorMessage, Form, Input, Label, SuccessMessage, Title } from './style'
+import { ButtonComponent } from '@/components/Button'
 
 const Login = () => {
     const [email, setEmail] = useState('')
@@ -57,7 +58,7 @@ const Login = () => {
           />
           {error && <ErrorMessage>{error}</ErrorMessage>}
           {message && <SuccessMessage>{message}</SuccessMessage>}
-          <Button type="submit">Entrar</Button>
+          <ButtonComponent size='small' variant='secondary' fullWidth>Entrar</ButtonComponent>
         </Form>
       </Container>
     )

@@ -18,7 +18,7 @@ export const Container = styled.main`
 `
 
 export const LinkComponent = styled.div`
-    width: 50%;
+    width: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,7 +34,11 @@ export const LinkComponent = styled.div`
     a {
         font-size: ${({ theme }) => theme.fontSizes.small};
         text-decoration: none;
-        color: ${({ theme }) => theme.colors.primaryText};
+        color: ${({ theme }) => theme.colors.buttonText};
         cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+        width: 50%;
     }
 `

@@ -20,13 +20,13 @@ export default function Home() {
       </div>
 
       <LinkComponent>
-        <ButtonComponent size='small' variant='secondary'>
+        <ButtonComponent size='small' variant='secondary' fullWidth>
           <Link href={'/login'}>Login</Link>
         </ButtonComponent>
 
         <TextComponent as="span">Ainda não possui cadastro?</TextComponent>
-        <ButtonComponent size='small' variant='secondary'>
-          <Link href={'/register'}>Registrar-se</Link>
+        <ButtonComponent size='small' variant='secondary' fullWidth>
+          <Link href={'/register'}>Registre-se</Link>
         </ButtonComponent>
       </LinkComponent>
     </Container>
