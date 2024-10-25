@@ -5,6 +5,7 @@ import Link from '@/components/Link'
 import Logo from '../../public/assets/images/logo-o-protetor.svg'
 import { Container, LinkComponent } from './style'
 import { TextComponent, TitleComponent } from '@/components/Typography'
+import { ButtonComponent } from '@/components/Button'
 
 export default function Home() {
   return (
@@ -19,7 +20,14 @@ export default function Home() {
       </div>
 
       <LinkComponent>
-        <Link href={'/register'}>Registrar-se</Link>
+        <ButtonComponent size='small' variant='secondary'>
+          <Link href={'/login'}>Login</Link>
+        </ButtonComponent>
+
+        <TextComponent as="span">Ainda não possui cadastro?</TextComponent>
+        <ButtonComponent size='small' variant='secondary'>
+          <Link href={'/register'}>Registrar-se</Link>
+        </ButtonComponent>
       </LinkComponent>
     </Container>
   )

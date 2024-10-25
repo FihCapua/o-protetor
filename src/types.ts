@@ -33,3 +33,11 @@ export interface LinkProps {
     href: string
     children: React.ReactNode
 }
+
+export interface ButtonProps {
+    variant?: 'primary' | 'secondary'
+    size?: 'small' | 'medium' | 'large'
+    fullWidth?: boolean
+    children: React.ReactNode
+    onClick?: () => void
+}

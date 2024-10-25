@@ -18,7 +18,18 @@ export const Container = styled.main`
 `
 
 export const LinkComponent = styled.div`
+    width: 50%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+    > span {
+        font-size: 12px;
+        margin-top: 10px;
+        margin-bottom: -5px;
+    }
 
     a {
         font-size: ${({ theme }) => theme.fontSizes.small};
