@@ -1,36 +1,64 @@
 
-import { ContactProps, EmailResultProps } from "@/types";
+import { postRequest } from "@/services/api/httpClient";
 import emailjs from '@emailjs/browser';
+import { ContactProps, EmailResultProps } from "@/types";
 
-export const notifyContacts = (contacts: ContactProps[], locationInfo: string): Promise<EmailResultProps[]> => {
+const sendEmergencySMS = async (phoneNumber: string, message: string): Promise<EmailResultProps> => {
+    const url = process.env.NEXT_PUBLIC_TEXTBELT_URL ?? 'https://textbelt.com/text';
+    const apiKey = process.env.NEXT_PUBLIC_TEXTBELT_KEY
+    const countryCode = "+55"
+    const formattedPhoneNumber = countryCode + phoneNumber;
+
+    const data = {
+        phone: formattedPhoneNumber,
+        message: message,
+        key: apiKey,
+    };
+  
+    try {
+      const result = await postRequest(url, data);
+  
+      if (result.success) {
+        return { success: true, contact: phoneNumber };
+      } else {
+        return { success: false, contact: phoneNumber, error: result.error };
+      }
+    } catch (error) {
+      return { success: false, contact: phoneNumber, error };
+    }
+  };
+
+export const notifyContacts = async (contacts: ContactProps[], locationInfo: string): Promise<EmailResultProps[]> => {
     const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '';
     const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '';
     const USER_ID = process.env.NEXT_PUBLIC_EMAILJS_USER_ID || '';
 
     if (!SERVICE_ID || !TEMPLATE_ID || !USER_ID) {
-        console.error("Variáveis de ambiente do EmailJS estão ausentes.");
         return Promise.resolve([]);
     }
     
-    const emailPromises = contacts.map(contact => {
-        return emailjs.send(
-            SERVICE_ID,
-            TEMPLATE_ID,
-            {
-                location_info: locationInfo,
-                to_email: contact.email,
-            },
-            USER_ID
+    const notificationPromises = contacts.map(contact => {
+        const emailPromise = emailjs.send(
+          SERVICE_ID,
+          TEMPLATE_ID,
+          {
+            location_info: locationInfo,
+            to_email: contact.email,
+          },
+          USER_ID
         )
         .then(response => {
-            console.log('E-mail enviado com sucesso:', response.status, response.text);
-            return { success: true, contact: contact.email };
+          return { success: true, contact: contact.email };
         })
         .catch(error => {
-            console.error(`Erro ao enviar e-mail para ${contact.email}:`, error);
-            return { success: false, contact: contact.email, error };
+          return { success: false, contact: contact.email, error };
         });
-    });
+    
+        const smsPromise = sendEmergencySMS(contact.phone, `Emergência! Localização: ${locationInfo}`);
+    
+        return Promise.all([emailPromise, smsPromise]);
+      });
 
-    return Promise.all(emailPromises);
+      const results = await Promise.all(notificationPromises);
+      return results.flat();
 };
