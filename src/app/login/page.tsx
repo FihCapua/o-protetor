@@ -53,7 +53,7 @@ const Login = () => {
             id="password"
             type="password"
             value={password}
-            onChange={(event: React.ChangeEvent<HTMLInputElement>) => setEmail(event.target.value)}
+            onChange={(event: React.ChangeEvent<HTMLInputElement>) => setPassword(event.target.value)}
             required
           />
           {error && <ErrorMessage>{error}</ErrorMessage>}

@@ -57,3 +57,9 @@ export interface InputFieldProps {
     placeholder?: string;
     required?: boolean;
 }
+
+export interface EmailResultProps {
+    success: boolean;
+    contact: string;
+    error?: any;
+}
