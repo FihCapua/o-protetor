@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, useContext, useState } from "react"
+import { createContext, useContext, useEffect, useState } from "react"
 import { ThemeProvider as StyledThemeProvider } from "styled-components"
 import { lightTheme, darkTheme } from "@/styles/theme"
 import { ThemeContextType } from "@/types"
@@ -10,8 +10,19 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
     const [isDarkMode, setIsDarkMode] = useState(false)
 
+    useEffect(() => {
+        const savedTheme = localStorage.getItem("theme")
+        if(savedTheme) {
+            setIsDarkMode(savedTheme === "dark")
+        }
+    }, [])
+
     const toggleTheme = () => {
-        setIsDarkMode((prev) => !prev)
+        setIsDarkMode((prevMode) => {
+            const newMode = !prevMode;
+            localStorage.setItem('theme', newMode ? 'dark' : 'light');
+            return newMode;
+        });
     }
 
     const theme = isDarkMode ? darkTheme : lightTheme
