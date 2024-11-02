@@ -35,7 +35,12 @@ const Dashboard = () => {
                 <Block>
                     <Title as="h2">Minhas medicações</Title>
                     <Text as="p">Programe lembretes para tomar seus medicamentos no horário certo.</Text>
-                    <ButtonComponent size="small" fullWidth>Adicionar Lembrete</ButtonComponent>
+                    <ButtonComponent size="small" fullWidth>
+                        <Link href="/list-medication">Ver Medicamentos</Link>
+                    </ButtonComponent>
+                    <ButtonComponent size="small" fullWidth>
+                        <Link href="/new-medication">Cadastrar Medicamento</Link>
+                    </ButtonComponent>
                 </Block>
 
                 <Block>

@@ -63,3 +63,10 @@ export interface EmailResultProps {
     contact: string;
     error?: any;
 }
+
+export interface MedicationProps {
+    id?: string;
+    name: string;
+    dosage: string;
+    time: string;
+}

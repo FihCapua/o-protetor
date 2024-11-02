@@ -21,7 +21,7 @@ export const Block = styled.div`
 
   a {
     text-decoration: none;
-    color: ${({ theme }) => theme.colors.highlightText};
+    color: ${({ theme }) => theme.colors.buttonText};
   }
 
   @media (max-width: 768px) {
