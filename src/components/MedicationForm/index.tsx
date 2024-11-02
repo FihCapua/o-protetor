@@ -8,6 +8,45 @@ import { TitleComponent } from "../Typography";
 import { ContainerMedicamentForm } from "./style";
 import { InputField } from "../Input";
 
+const requestNotificationPermission = async () => {
+    if ('Notification' in window) {
+        const permission = await Notification.requestPermission();
+        if (permission !== 'granted') {
+            console.warn('Permissão de notificação não concedida.');
+        }
+    }
+};
+
+const scheduleDailyNotification = (medication: MedicationProps) => {
+    const now = new Date();
+    const [hours, minutes] = medication.time.split(':').map(Number);
+    const notificationTime = new Date();
+    notificationTime.setHours(hours, minutes, 0, 0);
+
+    if (notificationTime.getTime() <= now.getTime()) {
+        notificationTime.setDate(notificationTime.getDate() + 1);
+    }
+
+    const scheduleNextNotification = () => {
+        const delay = notificationTime.getTime() - new Date().getTime();
+        
+        setTimeout(() => {
+            if (Notification.permission === 'granted') {
+                navigator.serviceWorker.ready.then(registration => {
+                    registration.showNotification(`Hora de tomar o remédio: ${medication.name}`, {
+                        body: `Dosagem: ${medication.dosage}`,
+                        // icon: '/icon-192x192.png',
+                    });
+                });
+            }
+            notificationTime.setDate(notificationTime.getDate() + 1);
+            scheduleNextNotification();
+        }, delay);
+    };
+
+    scheduleNextNotification(); 
+};
+
 export const MedicationForm = () => {
     const [medicationName, setMedicationName] = useState('');
     const [dosage, setDosage] = useState('');
@@ -22,6 +61,9 @@ export const MedicationForm = () => {
         };
 
         await addMedicationReminder(newMedication);
+        await requestNotificationPermission();
+        scheduleDailyNotification(newMedication);
+        
         setMedicationName('');
         setDosage('');
         setTime('');
