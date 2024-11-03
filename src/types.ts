@@ -69,4 +69,5 @@ export interface MedicationProps {
     name: string;
     dosage: string;
     time: string;
+    phoneNumber?: string;
 }

@@ -5,17 +5,24 @@ import { getMedications } from "@/services/medicationService";
 import { MedicationProps } from "@/types";
 import { TextComponent, TitleComponent } from "@/components/Typography";
 import { ListDetailsContainer, ListMedicationsContainer } from "./style";
+import { auth } from "@/app/firebase/firebaseConfig";
 
 export const MedicationList = () => {
     const [medications, setMedications] = useState<MedicationProps[]>([]);
 
     useEffect(() => {
         const fetchMedications = async () => {
-            const medicationList = await getMedications();
-            setMedications(medicationList);
+            const userId = auth.currentUser?.uid;
+            if (userId) {
+                const medicationList = await getMedications(userId);
+                setMedications(medicationList);
+            } else {
+                console.error("Usuário não autenticado ou userId está indefinido.");
+            }
         };
         fetchMedications();
     }, []);
+    console.log(medications);
 
     return (
         <ListMedicationsContainer>
