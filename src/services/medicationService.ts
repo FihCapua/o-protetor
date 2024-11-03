@@ -1,20 +1,40 @@
 import { database } from "@/app/firebase/firebaseConfig";
-import { addDoc, getDocs, collection } from "firebase/firestore";
+import { collection, query, where, addDoc, getDocs, getDoc, doc } from "firebase/firestore";
 import { MedicationProps } from "@/types";
 
-export const addMedicationReminder = async (medication: MedicationProps) => {
+export const addMedicationReminder = async (userId: string, medication: MedicationProps) => {
     try {
-        await addDoc(collection(database, 'medications'), medication);
-        alert("Lembrete de medicação adicionado com sucesso!");
-    } catch (error) {
-        console.error("Erro ao adicionar lembrete de medicação:", error);
-        alert("Erro ao adicionar lembrete. Por favor, tente novamente.");
+        const userDoc = await getDoc(doc(database, "users", userId));
+        const userPhoneNumber = userDoc.exists() ? userDoc.data().phoneNumber : null;
+
+    if (!userPhoneNumber) {
+      console.error("Número de telefone do usuário não encontrado.");
+      return;
     }
+
+    const medicationWithPhone = {
+      ...medication,
+      phoneNumber: userPhoneNumber,
+      userId,
+    };
+
+    await addDoc(collection(database, "medications"), medicationWithPhone);
+    alert("Lembrete de medicação adicionado com sucesso!");
+  } catch (error) {
+    console.error("Erro ao adicionar lembrete de medicação:", error);
+  }
 }
 
-export const getMedications = async (): Promise<MedicationProps[]> => {
+export const getMedications = async (userId: string): Promise<MedicationProps[]> => {
+    if (!userId) {
+        console.error("userId está indefinido.");
+        return [];
+    }
+    
     try {
-        const medicationsSnapshot = await getDocs(collection(database, 'medications'));
+        const medicationsRef = collection(database, 'medications');
+        const queryMedications = query(medicationsRef, where("userId", "==", userId));
+        const medicationsSnapshot = await getDocs(queryMedications);
         return medicationsSnapshot.docs.map(doc => ({
             id: doc.id,
             ...doc.data(),
