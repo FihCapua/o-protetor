@@ -22,7 +22,6 @@ export const MedicationList = () => {
         };
         fetchMedications();
     }, []);
-    console.log(medications);
 
     return (
         <ListMedicationsContainer>
