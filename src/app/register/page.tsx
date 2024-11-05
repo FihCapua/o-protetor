@@ -7,7 +7,6 @@ import { doc, setDoc } from "firebase/firestore";
 import { TitleComponent } from "@/components/Typography";
 import { Container, ErrorMessage, Form, Input, Label, SuccessMessage } from "./style";
 import { ButtonComponent } from "@/components/Button";
-import { PhoneInput } from "@/components/Input/PhoneInput";
 
 const AuthClient = () => {
     const [email, setEmail] = useState("");
@@ -20,7 +19,7 @@ const AuthClient = () => {
 
     const handleAuthRegister = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        const formattedPhoneNumber = `+55${phoneNumber.replace(/\D/g, '')}`;
+        const formattedPhoneNumber = phoneNumber.replace(/\D/g, '');
 
         setError('');
         setMessage('');
@@ -31,7 +30,7 @@ const AuthClient = () => {
 
             await setDoc(doc(database, "users", user.uid), {
               email,
-              formattedPhoneNumber,
+              phoneNumber: formattedPhoneNumber,
               userId: user.uid,
           });
 
@@ -69,9 +68,12 @@ const AuthClient = () => {
           required
         />
          <Label htmlFor="phone">Número de Telefone:</Label>
-          <PhoneInput
+          <Input
+            id="phone"
+            type="tel"
             value={phoneNumber}
             onChange={handlePhoneNumberChange}
+            required
           />
         {error && <ErrorMessage>{error}</ErrorMessage>}
         {message && <SuccessMessage>{message}</SuccessMessage>}
