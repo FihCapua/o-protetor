@@ -19,7 +19,17 @@ const AuthClient = () => {
 
     const handleAuthRegister = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        const formattedPhoneNumber = phoneNumber.replace(/\D/g, '');
+        let formattedPhoneNumber = phoneNumber.replace(/\D/g, '');
+
+        if (formattedPhoneNumber.length < 11) {
+          setError("O número de telefone deve incluir o DDD e ter pelo menos 11 dígitos.");
+          return;
+      }
+
+      if (!formattedPhoneNumber.startsWith("55")) {
+          formattedPhoneNumber = `55${formattedPhoneNumber}`;
+      }
+      formattedPhoneNumber = `+${formattedPhoneNumber}`;
 
         setError('');
         setMessage('');
@@ -33,8 +43,7 @@ const AuthClient = () => {
               phoneNumber: formattedPhoneNumber,
               userId: user.uid,
           });
-
-            console.log("Usuário registrado com sucesso!", auth, email, password);
+          
             setMessage('Usuário registrado com sucesso!');
             setEmail('');
             setPassword('');

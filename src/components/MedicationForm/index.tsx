@@ -1,7 +1,8 @@
 'use client';
 
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { addMedicationReminder } from "@/services/medicationService";
+import { sendSMSNotification } from "@/services/notificationService";
 import { requestNotificationPermission } from "@/helpers/requestNotificationPermission";
 import { useAuth } from "@/providers/AuthProvider";
 import { MedicationProps } from "@/types";
@@ -28,6 +29,12 @@ export const MedicationForm = () => {
             return;
         }
 
+        if (!user.phoneNumber) {
+            alert("Número de telefone não encontrado.");
+            return;
+        }
+
+        const phoneNumber = user.phoneNumber;
         const newMedication: MedicationProps = {
             name: medicationName,
             dosage,
@@ -36,6 +43,30 @@ export const MedicationForm = () => {
 
         await addMedicationReminder(user.uid, newMedication);
         await requestNotificationPermission();
+
+        const currentTime = new Date();
+        const medicationTime = new Date();
+        const [hours, minutes] = time.split(':').map(Number);
+        medicationTime.setHours(hours, minutes, 0, 0);
+
+        if (medicationTime < currentTime) {
+            medicationTime.setDate(medicationTime.getDate() + 1);
+        }
+        
+        const timeDifference = medicationTime.getTime() - currentTime.getTime();
+
+        if (timeDifference > 0) {
+            setTimeout(async () => {
+                try {
+                    const message = `Lembrete: Tome sua medicação "${medicationName}" (${dosage}) às ${time}.`;
+                    const response = await sendSMSNotification(phoneNumber, message);
+                } catch (error) {
+                    console.error("Erro ao enviar SMS:", error);
+                }
+            }, timeDifference);
+        } else {
+            console.warn("Horário de medicação já passou.");
+        }
         
         setMedicationName('');
         setDosage('');

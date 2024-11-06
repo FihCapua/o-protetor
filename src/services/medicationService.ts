@@ -1,37 +1,14 @@
 import { database } from "@/app/firebase/firebaseConfig";
-import { collection, query, where, addDoc, getDocs, getDoc, doc } from "firebase/firestore";
+import { collection, query, where, getDocs, doc, setDoc } from "firebase/firestore";
 import { MedicationProps } from "@/types";
 
 export const addMedicationReminder = async (userId: string, medication: MedicationProps) => {
-    try {
-        const userDoc = await getDoc(doc(database, "users", userId));
-        
-        if (!userDoc.exists()) {
-          console.error("Usuário não encontrado.");
-          return;
-        }
-
-        console.log("Dados do documento do usuário:", userDoc.data());
-
-        const userPhoneNumber = userDoc.data()?.phoneNumber;
-        console.log("Número de telefone do usuário:", userPhoneNumber);
-
-        if (!userPhoneNumber) {
-          console.error("Número de telefone do usuário não encontrado.");
-          return;
-        }
-
-        const medicationWithPhone = {
-          ...medication,
-          phoneNumber: userPhoneNumber,
-          userId,
-        };
-    
-        await addDoc(collection(database, "medications"), medicationWithPhone);
-        alert("Lembrete de medicação adicionado com sucesso!");
-    } catch (error) {
-      console.error("Erro ao adicionar lembrete de medicação:", error);
-    }
+  const medicationDocRef = doc(collection(database, "medications"));
+  await setDoc(medicationDocRef, {
+      ...medication,
+      userId,
+      createdAt: new Date().toISOString()
+  })
 }
 
 export const getMedications = async (userId: string): Promise<MedicationProps[]> => {
