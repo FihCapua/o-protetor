@@ -45,8 +45,10 @@ const Dashboard = () => {
 
                 <Block>
                     <Title as="h2">Dicas de Segurança Diárias</Title>
-                    <Text as="p">Receba dicas diárias para garantir sua segurança e bem-estar.</Text>
-                    <ButtonComponent size="small" fullWidth>Ver Dicas</ButtonComponent>
+                    <Text as="p">Veja dicas diárias para garantir sua saúde, segurança e bem-estar.</Text>
+                    <ButtonComponent size="small" fullWidth>
+                        <Link href="/tip-of-the-day">Ver dica do dia</Link>
+                    </ButtonComponent>
                 </Block>
 
                 <FullWidthBlock>

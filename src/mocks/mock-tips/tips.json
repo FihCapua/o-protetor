@@ -1,0 +1,603 @@
+[
+    {
+      "id": 1,
+      "tip": "Mantenha uma alimentação equilibrada, rica em frutas, verduras e grãos integrais, para garantir os nutrientes necessários ao organismo.",
+      "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+      "imagem": "https://example.com/imagens/alimentacao_saudavel.jpg"
+    },
+    {
+      "id": 2,
+      "tip": "Pratique atividades físicas regularmente, como caminhadas ou exercícios leves, para fortalecer músculos e ossos.",
+      "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/promocao_envelhecimento_saudavel_cartilha_profissional_saude.pdf",
+      "imagem": "https://example.com/imagens/atividade_fisica.jpg"
+    },
+    {
+      "id": 3,
+      "tip": "Realize exames médicos periódicos para monitorar a saúde e prevenir doenças.",
+      "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+      "imagem": "https://example.com/imagens/exames_medicos.jpg"
+    },
+    {
+      "id": 4,
+      "tip": "Mantenha a vacinação em dia, incluindo a vacina contra a gripe e outras recomendadas para a sua faixa etária.",
+      "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+      "imagem": "https://example.com/imagens/vacinacao.jpg"
+    },
+    {
+      "id": 5,
+      "tip": "Evite o consumo excessivo de álcool e não fume, para reduzir riscos de doenças cardiovasculares e respiratórias.",
+      "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/promocao_envelhecimento_saudavel_cartilha_profissional_saude.pdf",
+      "imagem": "https://example.com/imagens/nao_fumar.jpg"
+    },
+    {
+      "id": 6,
+      "tip": "Mantenha a mente ativa com atividades como leitura, jogos de tabuleiro ou palavras cruzadas.",
+      "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/promocao_envelhecimento_saudavel_cartilha_profissional_saude.pdf",
+      "imagem": "https://example.com/imagens/mente_ativa.jpg"
+    },
+    {
+      "id": 7,
+      "tip": "Durma de 7 a 8 horas por noite para garantir o descanso adequado do corpo e da mente.",
+      "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/promocao_envelhecimento_saudavel_cartilha_profissional_saude.pdf",
+      "imagem": "https://example.com/imagens/sono_reparador.jpg"
+    },
+    {
+      "id": 8,
+      "tip": "Mantenha-se hidratado, bebendo pelo menos 2 litros de água por dia.",
+      "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+      "imagem": "https://example.com/imagens/hidratacao.jpg"
+    },
+    {
+      "id": 9,
+      "tip": "Use calçados confortáveis e com solado antiderrapante para prevenir quedas.",
+      "referenceLink": "https://bvsms.saude.gov.br/casa-segura-para-o-idoso/",
+      "imagem": "https://example.com/imagens/calcado_seguro.jpg"
+    },
+    {
+      "id": 10,
+      "tip": "Instale barras de apoio no banheiro e em outros locais estratégicos da casa para aumentar a segurança.",
+      "referenceLink": "https://bvsms.saude.gov.br/casa-segura-para-o-idoso/",
+      "imagem": "https://example.com/imagens/barras_apoio.jpg"
+    },
+    {
+        "id": 11,
+        "tip": "Mantenha a casa bem iluminada, especialmente corredores e escadas, para evitar acidentes.",
+        "referenceLink": "https://bvsms.saude.gov.br/casa-segura-para-o-idoso/",
+        "imagem": "https://example.com/imagens/casa_iluminada.jpg"
+    },
+    {
+        "id": 12,
+        "tip": "Evite tapetes soltos e objetos espalhados pelo chão que possam causar tropeços.",
+        "referenceLink": "https://bvsms.saude.gov.br/casa-segura-para-o-idoso/",
+        "imagem": "https://example.com/imagens/tapete_seguro.jpg"
+    },
+    {
+        "id": 13,
+        "tip": "Use protetor solar diariamente para proteger a pele dos raios UV e prevenir câncer de pele.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+        "imagem": "https://example.com/imagens/protetor_solar.jpg"
+    },
+    {
+        "id": 14,
+        "tip": "Mantenha uma vida social ativa, participando de grupos comunitários ou atividades em centros de convivência.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/promocao_envelhecimento_saudavel_cartilha_profissional_saude.pdf",
+        "imagem": "https://example.com/imagens/vida_social.jpg"
+    },
+    {
+        "id": 15,
+        "tip": "Realize alongamentos diários para manter a flexibilidade e prevenir dores musculares.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/promocao_envelhecimento_saudavel_cartilha_profissional_saude.pdf",
+        "imagem": "https://example.com/imagens/alongamento.jpg"
+    },
+    {
+        "id": 16,
+        "tip": "Mantenha os medicamentos organizados e siga as orientações médicas quanto aos horários e dosagens.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+        "imagem": "https://example.com/imagens/medicamentos_organizados.jpg"
+    },
+    {
+        "id": 17,
+        "tip": "Evite automedicação; sempre consulte um profissional de saúde antes de tomar qualquer medicamento.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+        "imagem": "https://example.com/imagens/sem_automedicacao.jpg"
+    },
+    {
+        "id": 18,
+        "tip": "Mantenha uma dieta rica em cálcio e vitamina D para fortalecer os ossos e prevenir osteoporose.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+        "imagem": "https://example.com/imagens/dieta_calcio.jpg"
+    },
+    {
+        "id": 19,
+        "tip": "Faça exercícios de equilíbrio, como Tai Chi Chuan, para reduzir o risco de quedas.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/dicas/184queda_idosos.html",
+        "imagem": "https://example.com/imagens/exercicio_equilibrio.jpg"
+    },
+    {
+        "id": 20,
+        "tip": "Realize atividades que estimulem a memória, como aprender um novo idioma ou tocar um instrumento musical.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/promocao_envelhecimento_saudavel_cartilha_profissional_saude.pdf",
+        "imagem": "https://example.com/imagens/atividade_memoria.jpg"
+    },
+    {
+        "id": 21,
+        "tip": "Mantenha as vacinas em dia, incluindo a vacina contra a gripe e outras recomendadas para a sua faixa etária.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+        "imagem": "https://example.com/imagens/vacina_em_dia.jpg"
+    },
+    {
+        "id": 22,
+        "tip": "Evite o consumo excessivo de sal e açúcar para prevenir hipertensão e diabetes.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+        "imagem": "https://example.com/imagens/evitar_sal_acucar.jpg"
+    },
+    {
+        "id": 23,
+        "tip": "Mantenha um peso saudável para reduzir o risco de doenças crônicas.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+        "imagem": "https://example.com/imagens/peso_saudavel.jpg"
+    },
+    {
+        "id": 24,
+        "tip": "Mantenha a pressão arterial controlada, monitorando regularmente e seguindo as orientações médicas.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+        "imagem": "https://example.com/imagens/pressao_controlada.jpg"
+    },
+    {
+        "id": 25,
+        "tip": "Evite longos períodos na mesma posição; levante-se e mova-se regularmente para estimular a circulação.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/promocao_envelhecimento_saudavel_cartilha_profissional_saude.pdf",
+        "imagem": "https://example.com/imagens/movimentar_corpo.jpg"
+    },
+    {
+        "id": 26,
+        "tip": "Certifique-se de que a temperatura ambiente esteja confortável para evitar hipotermia ou superaquecimento.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+        "imagem": "https://example.com/imagens/temperatura_confortavel.jpg"
+    },
+    {
+        "id": 27,
+        "tip": "Use roupas adequadas ao clima para evitar problemas de saúde relacionados à temperatura.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/promocao_envelhecimento_saudavel_cartilha_profissional_saude.pdf",
+        "imagem": "https://example.com/imagens/roupa_adequada.jpg"
+    },
+    {
+        "id": 28,
+        "tip": "Mantenha a casa organizada e livre de obstáculos para facilitar a mobilidade.",
+        "referenceLink": "https://bvsms.saude.gov.br/casa-segura-para-o-idoso/",
+        "imagem": "https://example.com/imagens/casa_organizada.jpg"
+    },
+    {
+        "id": 29,
+        "tip": "Evite subir em escadas ou bancos; peça ajuda se precisar alcançar algo em locais altos.",
+        "referenceLink": "https://bvsms.saude.gov.br/casa-segura-para-o-idoso/",
+        "imagem": "https://example.com/imagens/evitar_escaladas.jpg"
+    },
+    {
+        "id": 30,
+        "tip": "Faça consultas regulares ao dentista para manter a saúde bucal.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+        "imagem": "https://example.com/imagens/saude_bucal.jpg"
+    },
+    {
+        "id": 31,
+        "tip": "Mantenha objetos de uso frequente em locais de fácil alcance para evitar acidentes.",
+        "referenceLink": "https://bvsms.saude.gov.br/casa-segura-para-o-idoso/",
+        "imagem": "https://example.com/imagens/objetos_acessiveis.jpg"
+    },
+    {
+        "id": 32,
+        "tip": "Use dispositivos de alerta pessoal, como pulseiras ou colares de emergência, caso viva sozinho.",
+        "referenceLink": "https://bvsms.saude.gov.br/casa-segura-para-o-idoso/",
+        "imagem": "https://example.com/imagens/dispositivo_alerta.jpg"
+    },
+    {
+        "id": 33,
+        "tip": "Evite carregar pesos excessivos para não sobrecarregar as articulações.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/promocao_envelhecimento_saudavel_cartilha_profissional_saude.pdf",
+        "imagem": "https://example.com/imagens/evitar_pesos.jpg"
+    },
+    {
+        "id": 34,
+        "tip": "Verifique regularmente a pressão arterial e mantenha um registro para acompanhar variações.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+        "imagem": "https://example.com/imagens/verificar_pressao.jpg"
+    },
+    {
+        "id": 35,
+        "tip": "Adote técnicas de respiração profunda para relaxar e reduzir o estresse.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/promocao_envelhecimento_saudavel_cartilha_profissional_saude.pdf",
+        "imagem": "https://example.com/imagens/respiracao_profunda.jpg"
+    },
+    {
+        "id": 36,
+        "tip": "Mantenha uma boa postura ao sentar e ao caminhar para evitar dores nas costas.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/promocao_envelhecimento_saudavel_cartilha_profissional_saude.pdf",
+        "imagem": "https://example.com/imagens/boa_postura.jpg"
+    },
+    {
+        "id": 37,
+        "tip": "Evite ambientes muito barulhentos para não prejudicar a audição.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+        "imagem": "https://example.com/imagens/ambiente_calmo.jpg"
+    },
+    {
+        "id": 38,
+        "tip": "Consuma alimentos ricos em fibras para manter a saúde intestinal.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+        "imagem": "https://example.com/imagens/alimentos_fibras.jpg"
+    },
+    {
+        "id": 39,
+        "tip": "Evite a exposição prolongada ao sol, especialmente entre 10h e 16h.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+        "imagem": "https://example.com/imagens/evitar_sol.jpg"
+    },
+    {
+        "id": 40,
+        "tip": "Mantenha uma rotina de horários para refeições e descanso.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/promocao_envelhecimento_saudavel_cartilha_profissional_saude.pdf",
+        "imagem": "https://example.com/imagens/rotina_saude.jpg"
+    },
+    {
+        "id": 41,
+        "tip": "Ajuste a altura da cama e cadeiras para facilitar o uso e reduzir o risco de quedas.",
+        "referenceLink": "https://bvsms.saude.gov.br/casa-segura-para-o-idoso/",
+        "imagem": "https://example.com/imagens/cama_ajustada.jpg"
+    },
+    {
+        "id": 42,
+        "tip": "Instale alarmes de incêndio e verifique as baterias regularmente.",
+        "referenceLink": "https://bvsms.saude.gov.br/casa-segura-para-o-idoso/",
+        "imagem": "https://example.com/imagens/alarme_incendio.jpg"
+    },
+    {
+        "id": 43,
+        "tip": "Evite tomar banho com a água muito quente para não danificar a pele.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+        "imagem": "https://example.com/imagens/banho_temperatura.jpg"
+    },
+    {
+        "id": 44,
+        "tip": "Pratique atividades recreativas que promovam alegria e bem-estar, como dançar ou ouvir música.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/promocao_envelhecimento_saudavel_cartilha_profissional_saude.pdf",
+        "imagem": "https://example.com/imagens/atividade_recreativa.jpg"
+    },
+    {
+        "id": 45,
+        "tip": "Faça exames regulares de audição para garantir que não haja perda auditiva.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+        "imagem": "https://example.com/imagens/exame_audicao.jpg"
+    },
+    {
+        "id": 46,
+        "tip": "Verifique as condições dos eletrodomésticos para evitar riscos de choque ou incêndio.",
+        "referenceLink": "https://bvsms.saude.gov.br/casa-segura-para-o-idoso/",
+        "imagem": "https://example.com/imagens/eletrodomesticos_seguros.jpg"
+    },
+    {
+        "id": 47,
+        "tip": "Participe de programas de fisioterapia se recomendado, para melhorar a mobilidade.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/promocao_envelhecimento_saudavel_cartilha_profissional_saude.pdf",
+        "imagem": "https://example.com/imagens/fisioterapia.jpg"
+    },
+    {
+        "id": 48,
+        "tip": "Use óculos com a prescrição correta e verifique regularmente com um oftalmologista.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+        "imagem": "https://example.com/imagens/oculos_prescricao.jpg"
+    },
+    {
+        "id": 49,
+        "tip": "Faça atividades que promovam a interação com a natureza, como jardinagem.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/promocao_envelhecimento_saudavel_cartilha_profissional_saude.pdf",
+        "imagem": "https://example.com/imagens/jardinagem.jpg"
+    },
+    {
+        "id": 50,
+        "tip": "Adapte a casa com tecnologia assistiva, como telefones com teclas grandes.",
+        "referenceLink": "https://bvsms.saude.gov.br/casa-segura-para-o-idoso/",
+        "imagem": "https://example.com/imagens/tecnologia_assistiva.jpg"
+    },
+    {
+        "id": 51,
+        "tip": "Monitore os sinais de depressão e procure ajuda profissional se necessário.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+        "imagem": "https://example.com/imagens/depressao_sinais.jpg"
+    },
+    {
+        "id": 52,
+        "tip": "Faça exercícios respiratórios para fortalecer os pulmões e melhorar a capacidade respiratória.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/promocao_envelhecimento_saudavel_cartilha_profissional_saude.pdf",
+        "imagem": "https://example.com/imagens/exercicio_respiratorio.jpg"
+    },
+    {
+        "id": 53,
+        "tip": "Evite consumir alimentos ultraprocessados, prefira opções frescas e naturais.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+        "imagem": "https://example.com/imagens/alimentos_naturais.jpg"
+    },
+    {
+        "id": 54,
+        "tip": "Utilize uma bengala ou andador se precisar de apoio extra para caminhar.",
+        "referenceLink": "https://bvsms.saude.gov.br/casa-segura-para-o-idoso/",
+        "imagem": "https://example.com/imagens/bengala_andador.jpg"
+    },
+    {
+        "id": 55,
+        "tip": "Aprenda técnicas de relaxamento, como meditação, para manter a calma e reduzir a ansiedade.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/promocao_envelhecimento_saudavel_cartilha_profissional_saude.pdf",
+        "imagem": "https://example.com/imagens/meditacao.jpg"
+    },
+    {
+        "id": 56,
+        "tip": "Verifique a validade dos alimentos antes de consumir para evitar intoxicações alimentares.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+        "imagem": "https://example.com/imagens/validade_alimentos.jpg"
+    },
+    {
+        "id": 57,
+        "tip": "Participe de oficinas ou cursos para aprender novas habilidades e manter-se atualizado.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/promocao_envelhecimento_saudavel_cartilha_profissional_saude.pdf",
+        "imagem": "https://example.com/imagens/novas_habilidades.jpg"
+    },
+    {
+        "id": 58,
+        "tip": "Use roupas de cores vivas ao sair de casa, para ser mais facilmente visível em ambientes externos.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+        "imagem": "https://example.com/imagens/roupas_vivas.jpg"
+    },
+    {
+        "id": 59,
+        "tip": "Fique atento a fraudes e golpes direcionados a idosos, nunca forneça informações pessoais por telefone.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+        "imagem": "https://example.com/imagens/evitar_golpes.jpg"
+    },
+    {
+        "id": 60,
+        "tip": "Tenha sempre os números de emergência à mão, como contatos médicos e de familiares.",
+        "referenceLink": "https://bvsms.saude.gov.br/casa-segura-para-o-idoso/",
+        "imagem": "https://example.com/imagens/numeros_emergencia.jpg"
+    },
+    {
+        "id": 61,
+        "tip": "Evite realizar atividades que exigem esforço físico intenso sem supervisão ou orientação profissional.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/promocao_envelhecimento_saudavel_cartilha_profissional_saude.pdf",
+        "imagem": "https://example.com/imagens/esforco_intenso.jpg"
+    },
+    {
+        "id": 62,
+        "tip": "Consulte um nutricionista para orientações personalizadas sobre a alimentação adequada para a sua idade.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+        "imagem": "https://example.com/imagens/consulta_nutricionista.jpg"
+    },
+    {
+        "id": 63,
+        "tip": "Higienize corretamente as mãos antes das refeições e após ir ao banheiro, para prevenir doenças.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+        "imagem": "https://example.com/imagens/higienizar_maos.jpg"
+    },
+    {
+        "id": 64,
+        "tip": "Adote medidas de prevenção contra quedas, como colocar pisos antiderrapantes na casa.",
+        "referenceLink": "https://bvsms.saude.gov.br/casa-segura-para-o-idoso/",
+        "imagem": "https://example.com/imagens/piso_antiderrapante.jpg"
+    },
+    {
+        "id": 65,
+        "tip": "Mantenha uma boa comunicação com familiares ou amigos para garantir apoio em momentos de necessidade.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/promocao_envelhecimento_saudavel_cartilha_profissional_saude.pdf",
+        "imagem": "https://example.com/imagens/comunicacao_familia.jpg"
+    },
+    {
+        "id": 66,
+        "tip": "Adapte o ambiente da casa para facilitar a mobilidade, com corredores livres e amplos.",
+        "referenceLink": "https://bvsms.saude.gov.br/casa-segura-para-o-idoso/",
+        "imagem": "https://example.com/imagens/ambiente_mobilidade.jpg"
+    },
+    {
+        "id": 67,
+        "tip": "Evite o consumo de alimentos crus que possam estar contaminados, como peixes e carnes mal cozidas.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+        "imagem": "https://example.com/imagens/alimentos_crus.jpg"
+    },
+    {
+        "id": 68,
+        "tip": "Use dispositivos de auxílio, como óculos ou aparelhos auditivos, conforme a necessidade.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+        "imagem": "https://example.com/imagens/oculos_auditivo.jpg"
+    },
+    {
+        "id": 69,
+        "tip": "Mantenha uma alimentação balanceada, priorizando o consumo de alimentos frescos e naturais.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+        "imagem": "https://example.com/imagens/alimentacao_balanceada.jpg"
+    },
+    {
+        "id": 70,
+        "tip": "Adote técnicas de mindfulness para aumentar o foco e reduzir a ansiedade.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/promocao_envelhecimento_saudavel_cartilha_profissional_saude.pdf",
+        "imagem": "https://example.com/imagens/mindfulness.jpg"
+    },
+    {
+        "id": 71,
+        "tip": "Evite tarefas domésticas perigosas, como consertos elétricos, sem ajuda especializada.",
+        "referenceLink": "https://bvsms.saude.gov.br/casa-segura-para-o-idoso/",
+        "imagem": "https://example.com/imagens/tarefas_perigosas.jpg"
+    },
+    {
+        "id": 72,
+        "tip": "Use um temporizador ou lembretes para ajudar a lembrar dos horários de tomar medicamentos.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+        "imagem": "https://example.com/imagens/temporizador_medicamentos.jpg"
+    },
+    {
+        "id": 73,
+        "tip": "Consulte um médico regularmente para exames de rotina e acompanhamento da saúde.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+        "imagem": "https://example.com/imagens/consulta_medica.jpg"
+    },
+    {
+        "id": 74,
+        "tip": "Realize exercícios leves de fortalecimento muscular para manter a força física.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/promocao_envelhecimento_saudavel_cartilha_profissional_saude.pdf",
+        "imagem": "https://example.com/imagens/fortalecimento_muscular.jpg"
+    },
+    {
+        "id": 75,
+        "tip": "Mantenha-se atualizado com informações sobre direitos e benefícios para idosos.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/promocao_envelhecimento_saudavel_cartilha_profissional_saude.pdf",
+        "imagem": "https://example.com/imagens/direitos_beneficios.jpg"
+    },
+    {
+        "id": 76,
+        "tip": "Utilize utensílios ergonômicos na cozinha para facilitar o preparo das refeições.",
+        "referenceLink": "https://bvsms.saude.gov.br/casa-segura-para-o-idoso/",
+        "imagem": "https://example.com/imagens/utensilios_ergonomicos.jpg"
+    },
+    {
+        "id": 77,
+        "tip": "Evite esticar ou alcançar objetos em locais altos sem apoio seguro.",
+        "referenceLink": "https://bvsms.saude.gov.br/casa-segura-para-o-idoso/",
+        "imagem": "https://example.com/imagens/alcancar_objetos.jpg"
+    },
+    {
+        "id": 78,
+        "tip": "Pratique exercícios que estimulam a coordenação motora, como yoga ou pilates.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/promocao_envelhecimento_saudavel_cartilha_profissional_saude.pdf",
+        "imagem": "https://example.com/imagens/exercicio_coordenacao.jpg"
+    },
+    {
+        "id": 79,
+        "tip": "Hidrate a pele com cremes específicos para evitar ressecamento.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+        "imagem": "https://example.com/imagens/hidratar_pele.jpg"
+    },
+    {
+        "id": 80,
+        "tip": "Adote práticas de reciclagem para contribuir com a sustentabilidade ambiental.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/promocao_envelhecimento_saudavel_cartilha_profissional_saude.pdf",
+        "imagem": "https://example.com/imagens/reciclagem.jpg"
+    },
+    {
+        "id": 81,
+        "tip": "Tome precauções ao usar o fogão, nunca deixe panelas sem supervisão.",
+        "referenceLink": "https://bvsms.saude.gov.br/casa-segura-para-o-idoso/",
+        "imagem": "https://example.com/imagens/seguranca_fogao.jpg"
+    },
+    {
+        "id": 82,
+        "tip": "Mantenha o ambiente de trabalho em casa ergonômico para evitar dores musculares.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/promocao_envelhecimento_saudavel_cartilha_profissional_saude.pdf",
+        "imagem": "https://example.com/imagens/ergonomia.jpg"
+    },
+    {
+        "id": 83,
+        "tip": "Use lanternas em caso de falta de luz, e nunca velas, para evitar incêndios.",
+        "referenceLink": "https://bvsms.saude.gov.br/casa-segura-para-o-idoso/",
+        "imagem": "https://example.com/imagens/lanterna_segura.jpg"
+    },
+    {
+        "id": 84,
+        "tip": "Limite o consumo de cafeína, especialmente à noite, para evitar insônia.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+        "imagem": "https://example.com/imagens/limitar_cafeina.jpg"
+    },
+    {
+        "id": 85,
+        "tip": "Participe de programas comunitários para conhecer novas pessoas e criar laços sociais.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/promocao_envelhecimento_saudavel_cartilha_profissional_saude.pdf",
+        "imagem": "https://example.com/imagens/comunidade.jpg"
+    },
+    {
+        "id": 86,
+        "tip": "Mantenha plantas em casa para melhorar a qualidade do ar e o bem-estar.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/promocao_envelhecimento_saudavel_cartilha_profissional_saude.pdf",
+        "imagem": "https://example.com/imagens/plantas_casa.jpg"
+    },
+    {
+        "id": 87,
+        "tip": "Evite dormir logo após as refeições para facilitar a digestão.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+        "imagem": "https://example.com/imagens/evitar_dormir.jpg"
+    },
+    {
+        "id": 88,
+        "tip": "Adapte o banheiro com pisos antiderrapantes e bancos de apoio para maior segurança.",
+        "referenceLink": "https://bvsms.saude.gov.br/casa-segura-para-o-idoso/",
+        "imagem": "https://example.com/imagens/banheiro_seguro.jpg"
+    },
+    {
+        "id": 89,
+        "tip": "Consuma alimentos ricos em ômega-3, como peixes e sementes, para a saúde cerebral.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+        "imagem": "https://example.com/imagens/omega3.jpg"
+    },
+    {
+        "id": 90,
+        "tip": "Pratique o hábito de agradecer diariamente para manter uma mentalidade positiva.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/promocao_envelhecimento_saudavel_cartilha_profissional_saude.pdf",
+        "imagem": "https://example.com/imagens/gratidao.jpg"
+    },
+    {
+        "id": 91,
+        "tip": "Use roupas apropriadas para evitar assaduras em dias muito quentes.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+        "imagem": "https://example.com/imagens/roupa_verao.jpg"
+    },
+    {
+        "id": 92,
+        "tip": "Tenha um plano de emergência em caso de desastres naturais, como enchentes.",
+        "referenceLink": "https://bvsms.saude.gov.br/casa-segura-para-o-idoso/",
+        "imagem": "https://example.com/imagens/plano_emergencia.jpg"
+    },
+    {
+        "id": 93,
+        "tip": "Acompanhe seu nível de glicose se tiver diabetes, seguindo as orientações médicas.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+        "imagem": "https://example.com/imagens/nivel_glicose.jpg"
+    },
+    {
+        "id": 94,
+        "tip": "Consuma lanches leves entre as refeições para manter a energia durante o dia.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+        "imagem": "https://example.com/imagens/lanches_leves.jpg"
+    },
+    {
+        "id": 95,
+        "tip": "Utilize travesseiros ergonômicos para melhorar a qualidade do sono.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/promocao_envelhecimento_saudavel_cartilha_profissional_saude.pdf",
+        "imagem": "https://example.com/imagens/travesseiro_ergonomico.jpg"
+    },
+    {
+        "id": 96,
+        "tip": "Verifique a iluminação das áreas externas da casa para evitar acidentes à noite.",
+        "referenceLink": "https://bvsms.saude.gov.br/casa-segura-para-o-idoso/",
+        "imagem": "https://example.com/imagens/iluminacao_externa.jpg"
+    },
+    {
+        "id": 97,
+        "tip": "Evite exposição prolongada a telas de dispositivos eletrônicos, especialmente antes de dormir.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/caderneta_saude_pessoa_idosa_5ed_1re.pdf",
+        "imagem": "https://example.com/imagens/evitar_telas.jpg"
+    },
+    {
+        "id": 98,
+        "tip": "Utilize aplicativos de saúde para monitorar a atividade física e os medicamentos.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/promocao_envelhecimento_saudavel_cartilha_profissional_saude.pdf",
+        "imagem": "https://example.com/imagens/app_saude.jpg"
+    },
+    {
+        "id": 99,
+        "tip": "Adote práticas de reciclagem para contribuir com a sustentabilidade.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/promocao_envelhecimento_saudavel_cartilha_profissional_saude.pdf",
+        "imagem": "https://example.com/imagens/reciclagem.jpg"
+    },
+    {
+        "id": 100,
+        "tip": "Faça uso de técnicas de relaxamento, como ouvir música ou fazer artesanato, para aliviar o estresse.",
+        "referenceLink": "https://bvsms.saude.gov.br/bvs/publicacoes/promocao_envelhecimento_saudavel_cartilha_profissional_saude.pdf",
+        "imagem": "https://example.com/imagens/tecnicas_relaxamento.jpg"
+    }
+        
+  ]

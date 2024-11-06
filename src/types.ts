@@ -71,3 +71,9 @@ export interface MedicationProps {
     time: string;
     phoneNumber?: string;
 }
+
+export interface TipProps {
+    id: number;
+    tip: string;
+    referenceLink: string;
+};
