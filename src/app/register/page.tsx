@@ -9,6 +9,7 @@ import { Container, ErrorMessage, Form, Input, Label, SuccessMessage } from "./s
 import { ButtonComponent } from "@/components/Button";
 
 const AuthClient = () => {
+    const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [phoneNumber, setPhoneNumber] = useState("");
@@ -39,17 +40,20 @@ const AuthClient = () => {
             const user = userCredential.user;
 
             await setDoc(doc(database, "users", user.uid), {
+              name,
               email,
               phoneNumber: formattedPhoneNumber,
               userId: user.uid,
           });
           
             setMessage('Usuário registrado com sucesso!');
+            setName('');
             setEmail('');
             setPassword('');
             setPhoneNumber('');
         } catch (error: Error | any) {
             setError(`Erro ao registrar o usuário: ${error.message}`);
+            setName('');
             setEmail('');
             setPassword('');
             setPhoneNumber('');
@@ -60,6 +64,14 @@ const AuthClient = () => {
       <Container>
       <TitleComponent as="h1">Registrar-se</TitleComponent>
       <Form onSubmit={handleAuthRegister}>
+        <Label htmlFor="name">Nome:</Label>
+        <Input
+          id="name"
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
+          />
         <Label htmlFor="email">Email:</Label>
         <Input
           id="email"

@@ -8,7 +8,7 @@ const Header = () => {
 
   return (
     <HeaderContainer>
-      <TitleComponent as="h1">Olá, {user?.email}!</TitleComponent>
+      <TitleComponent as="h1">Olá, {user?.name || "Usuário"}!</TitleComponent>
       <ButtonComponent size="small" onClick={logout}>Logout</ButtonComponent>
     </HeaderContainer>
   );

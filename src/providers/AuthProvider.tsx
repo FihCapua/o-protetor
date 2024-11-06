@@ -6,7 +6,10 @@ import { auth, database } from "@/app/firebase/firebaseConfig";
 import { AuthContextType } from "@/types";
 import { doc, getDoc } from "firebase/firestore";
 
-type UserWithPhoneNumber = FirebaseUser & { phoneNumber?: string | null };
+type UserWithPhoneNumber = FirebaseUser & { 
+    phoneNumber?: string | null;
+    name?: string;
+  };
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
@@ -25,7 +28,8 @@ export const AuthProvider = ({ children }: {children: React.ReactNode}) => {
                         const additionalData = userDoc.data();
                         setUser({
                             ...currentUser,
-                            phoneNumber: additionalData.phoneNumber || null, // Adiciona o phoneNumber ao objeto user
+                            name: additionalData.name || "",
+                            phoneNumber: additionalData.phoneNumber || null,
                         });
                     } else {
                         setUser(currentUser);
@@ -59,5 +63,5 @@ export const useAuth = () => {
     if (!context) {
       throw new Error("useAuth must be used within an AuthProvider");
     }
-    return context;
+    return context as { user: UserWithPhoneNumber | null; logout: () => void; loading: boolean };
   };

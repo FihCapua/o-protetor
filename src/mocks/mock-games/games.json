@@ -1,0 +1,52 @@
+[
+    {
+      "id": 1,
+      "aplicativo": "Lumosity",
+      "categoria": "Treinamento Cognitivo",
+      "link": {
+        "playstore": "https://play.google.com/store/apps/details?id=com.lumoslabs.lumosity",
+        "appstore": "https://apps.apple.com/app/lumosity-brain-training/id577232024"
+      },
+      "imagem": "https://is5-ssl.mzstatic.com/image/thumb/Purple116/v4/5b/5e/5e/5b5e5e5e-5e5e-5e5e-5e5e-5e5e5e5e5e5e/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/460x0w.webp"
+    },
+    {
+      "id": 2,
+      "aplicativo": "Peak",
+      "categoria": "Jogos de Memória",
+      "link": {
+        "playstore": "https://play.google.com/store/apps/details?id=com.brainbow.peak.app",
+        "appstore": "https://apps.apple.com/app/peak-brain-training/id806223188"
+      },
+      "imagem": "https://is5-ssl.mzstatic.com/image/thumb/Purple116/v4/5b/5e/5e/5b5e5e5e-5e5e-5e5e-5e5e-5e5e5e5e5e5e/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/460x0w.webp"
+    },
+    {
+      "id": 3,
+      "aplicativo": "Elevate",
+      "categoria": "Treinamento de Habilidades",
+      "link": {
+        "playstore": "https://play.google.com/store/apps/details?id=com.wonder",
+        "appstore": "https://apps.apple.com/app/elevate-brain-training/id875063456"
+      },
+      "imagem": "https://is5-ssl.mzstatic.com/image/thumb/Purple116/v4/5b/5e/5e/5b5e5e5e-5e5e-5e5e-5e5e-5e5e5e5e5e5e/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/460x0w.webp"
+    },
+    {
+      "id": 4,
+      "aplicativo": "CogniFit",
+      "categoria": "Estimulação Cognitiva",
+      "link": {
+        "playstore": "https://play.google.com/store/apps/details?id=com.cognifit.app",
+        "appstore": "https://apps.apple.com/app/cognifit-cognitive-training/id903732993"
+      },
+      "imagem": "https://is5-ssl.mzstatic.com/image/thumb/Purple116/v4/5b/5e/5e/5b5e5e5e-5e5e-5e5e-5e5e-5e5e5e5e5e5e/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/460x0w.webp"
+    },
+    {
+      "id": 5,
+      "aplicativo": "NeuroNation",
+      "categoria": "Exercícios para o Cérebro",
+      "link": {
+        "playstore": "https://play.google.com/store/apps/details?id=air.nn.mobile.app.main",
+        "appstore": "https://apps.apple.com/app/neuronation-brain-training/id863231052"
+      },
+      "imagem": "https://is5-ssl.mzstatic.com/image/thumb/Purple116/v4/5b/5e/5e/5b5e5e5e-5e5e-5e5e-5e5e-5e5e5e5e5e5e/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/460x0w.webp"
+    }
+  ]
