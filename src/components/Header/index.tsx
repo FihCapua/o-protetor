@@ -6,9 +6,14 @@ import { useAuth } from "@/providers/AuthProvider";
 const Header = () => {
   const { user, logout } = useAuth();
 
+  const formattedName = (user?.name || "Usuário")
+  .split(" ")[0]
+  .toLowerCase()
+  .replace(/^./, (char) => char.toUpperCase())
+
   return (
     <HeaderContainer>
-      <TitleComponent as="h1">Olá, {user?.name || "Usuário"}!</TitleComponent>
+      <TitleComponent as="h1">Olá, {formattedName}!</TitleComponent>
       <ButtonComponent size="small" onClick={logout}>Logout</ButtonComponent>
     </HeaderContainer>
   );
