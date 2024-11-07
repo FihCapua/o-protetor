@@ -54,7 +54,9 @@ const Dashboard = () => {
                 <FullWidthBlock>
                     <Title as="h2">Jogos que estimulam a mente</Title>
                     <Text as="p">Estimule agora sua mente com jogos que ajudam na memória e cognição.</Text>
-                    <ButtonComponent size="small" fullWidth>Jogar Agora</ButtonComponent>
+                    <ButtonComponent size="small" fullWidth>
+                        <Link href="/game-list">Ver lista de jogos</Link>
+                    </ButtonComponent>
                 </FullWidthBlock>
             </Container>
         </ProtectedRoute>

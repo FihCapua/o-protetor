@@ -31,6 +31,8 @@ export interface TextProps {
 
 export interface LinkProps {
     href: string
+    target?: string
+    rel?: string
     children: React.ReactNode
 }
 

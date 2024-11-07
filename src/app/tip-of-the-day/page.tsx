@@ -5,6 +5,7 @@ import tips from '@/mocks/mock-tips/tips.json'
 import { TitleComponent, TextComponent } from '@/components/Typography'
 import { TipProps } from '@/types';
 import { ContainerCardTips, ContainerWrapper } from './style'
+import Link from '@/components/Link';
 
 const DailyTips = () => {
     const [tipOfDay, setTipOfDay] = useState<TipProps | null>(null)
@@ -51,9 +52,9 @@ const DailyTips = () => {
           {tipOfDay && (
             <ContainerCardTips className="dica-card">
               <h3>&quot;{tipOfDay.tip}&quot;</h3>
-              <a href={tipOfDay.referenceLink} target="_blank" rel="noopener noreferrer">
+              <Link href={tipOfDay.referenceLink}>
                 Saiba mais
-              </a>
+              </Link>
             </ContainerCardTips>
           )}
         </ContainerWrapper>

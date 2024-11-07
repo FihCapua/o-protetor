@@ -1,52 +1,53 @@
 [
     {
       "id": 1,
-      "aplicativo": "Lumosity",
-      "categoria": "Treinamento Cognitivo",
+      "appName": "Lumosity",
+      "category": "Treinamento Cognitivo",
       "link": {
         "playstore": "https://play.google.com/store/apps/details?id=com.lumoslabs.lumosity",
         "appstore": "https://apps.apple.com/app/lumosity-brain-training/id577232024"
       },
-      "imagem": "https://is5-ssl.mzstatic.com/image/thumb/Purple116/v4/5b/5e/5e/5b5e5e5e-5e5e-5e5e-5e5e-5e5e5e5e5e5e/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/460x0w.webp"
+      "appImage": "https://i.pinimg.com/736x/69/30/ec/6930ec38a4763facc7faa3f15f171170.jpg"
     },
     {
       "id": 2,
-      "aplicativo": "Peak",
-      "categoria": "Jogos de Memória",
+      "appName": "Peak",
+      "category": "Jogos de Memória",
       "link": {
         "playstore": "https://play.google.com/store/apps/details?id=com.brainbow.peak.app",
         "appstore": "https://apps.apple.com/app/peak-brain-training/id806223188"
       },
-      "imagem": "https://is5-ssl.mzstatic.com/image/thumb/Purple116/v4/5b/5e/5e/5b5e5e5e-5e5e-5e5e-5e5e-5e5e5e5e5e5e/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/460x0w.webp"
+      "appImage": "https://dl.memuplay.com/new_market/img/com.brainbow.peak.app.icon.2021-03-23-11-17-23.png"
     },
     {
       "id": 3,
-      "aplicativo": "Elevate",
-      "categoria": "Treinamento de Habilidades",
+      "appName": "Elevate",
+      "category": "Treinamento de Habilidades",
       "link": {
         "playstore": "https://play.google.com/store/apps/details?id=com.wonder",
         "appstore": "https://apps.apple.com/app/elevate-brain-training/id875063456"
       },
-      "imagem": "https://is5-ssl.mzstatic.com/image/thumb/Purple116/v4/5b/5e/5e/5b5e5e5e-5e5e-5e5e-5e5e-5e5e5e5e5e5e/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/460x0w.webp"
+      "appImage": "https://media.imgcdn.org/repo/2023/03/elevate-brain-training-games/Elevate-Brain-Training-Games-Logo.png"
     },
     {
       "id": 4,
-      "aplicativo": "CogniFit",
-      "categoria": "Estimulação Cognitiva",
+      "appName": "CogniFit",
+      "category": "Estimulação Cognitiva",
       "link": {
         "playstore": "https://play.google.com/store/apps/details?id=com.cognifit.app",
         "appstore": "https://apps.apple.com/app/cognifit-cognitive-training/id903732993"
       },
-      "imagem": "https://is5-ssl.mzstatic.com/image/thumb/Purple116/v4/5b/5e/5e/5b5e5e5e-5e5e-5e5e-5e5e-5e5e5e5e5e5e/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/460x0w.webp"
+      "appImage": "https://play-lh.googleusercontent.com/gF03GM8gHD40XTS2wz9WU6XI_cF_g27w9_3TLtIjdP5JPPNzwgiR72FKPhu_SkIiwCc"
     },
     {
       "id": 5,
-      "aplicativo": "NeuroNation",
-      "categoria": "Exercícios para o Cérebro",
+      "appName": "NeuroNation",
+      "category": "Exercícios para o Cérebro",
       "link": {
         "playstore": "https://play.google.com/store/apps/details?id=air.nn.mobile.app.main",
         "appstore": "https://apps.apple.com/app/neuronation-brain-training/id863231052"
       },
-      "imagem": "https://is5-ssl.mzstatic.com/image/thumb/Purple116/v4/5b/5e/5e/5b5e5e5e-5e5e-5e5e-5e5e-5e5e5e5e5e5e/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/460x0w.webp"
+      "appImage": "https://play-lh.googleusercontent.com/_yVojT4QNXc6ezmvZ9TlJZ-DBU2J_YscKSuZl4ADXKUC4xtry68QN-0uKxxtuVveLbk"
     }
-  ]
+]
+  
