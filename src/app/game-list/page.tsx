@@ -18,7 +18,7 @@ const GamesList = () => {
               <GameImage src={game.appImage} alt={game.appName} width={180} height={180} />
               <GameTitle>{game.appName}</GameTitle>
               <GameCategory>{game.category}</GameCategory>
-              <Link href={game.link.playstore}>
+              <Link href={game.link.playstore} target="_blank">
                 <ButtonComponent>Jogar Agora</ButtonComponent>
               </Link>
             </GameCard>

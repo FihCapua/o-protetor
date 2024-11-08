@@ -17,6 +17,7 @@ export interface ImageProps {
     alt: string
     width?: number
     height?: number
+    priority?: boolean 
 }
 
 export interface TitleProps {

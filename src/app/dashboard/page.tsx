@@ -25,10 +25,10 @@ const Dashboard = () => {
                     <Title as="h2">Contatos de Emergência</Title>
                     <Text as="p">Tenha acesso rápido a seus contatos de emergência.</Text>
                     <ButtonComponent size="small" fullWidth>
-                        <Link href="/list-contact">Ver Contatos</Link>
+                        <Link href="/list-contact" target='_self'>Ver Contatos</Link>
                     </ButtonComponent>
                     <ButtonComponent size="small" fullWidth>
-                        <Link href="/new-contact">Cadastrar Contato</Link>
+                        <Link href="/new-contact" target='_self'>Cadastrar Contato</Link>
                     </ButtonComponent>
                 </Block>
 
@@ -36,10 +36,10 @@ const Dashboard = () => {
                     <Title as="h2">Minhas medicações</Title>
                     <Text as="p">Programe lembretes para tomar seus medicamentos no horário certo.</Text>
                     <ButtonComponent size="small" fullWidth>
-                        <Link href="/list-medication">Ver Medicamentos</Link>
+                        <Link href="/list-medication" target='_self'>Ver Medicamentos</Link>
                     </ButtonComponent>
                     <ButtonComponent size="small" fullWidth>
-                        <Link href="/new-medication">Cadastrar Medicamento</Link>
+                        <Link href="/new-medication" target='_self'>Cadastrar Medicamento</Link>
                     </ButtonComponent>
                 </Block>
 
@@ -47,7 +47,7 @@ const Dashboard = () => {
                     <Title as="h2">Dicas de Segurança Diárias</Title>
                     <Text as="p">Veja dicas diárias para garantir sua saúde, segurança e bem-estar.</Text>
                     <ButtonComponent size="small" fullWidth>
-                        <Link href="/tip-of-the-day">Ver dica do dia</Link>
+                        <Link href="/tip-of-the-day" target='_self'>Ver dica do dia</Link>
                     </ButtonComponent>
                 </Block>
 
@@ -55,7 +55,7 @@ const Dashboard = () => {
                     <Title as="h2">Jogos que estimulam a mente</Title>
                     <Text as="p">Estimule agora sua mente com jogos que ajudam na memória e cognição.</Text>
                     <ButtonComponent size="small" fullWidth>
-                        <Link href="/game-list">Ver lista de jogos</Link>
+                        <Link href="/game-list" target='_self'>Ver lista de jogos</Link>
                     </ButtonComponent>
                 </FullWidthBlock>
             </Container>

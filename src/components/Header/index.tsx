@@ -1,6 +1,7 @@
 import { HeaderContainer } from "./style";
 import { TitleComponent } from "@/components/Typography";
 import { ButtonComponent } from "@/components/Button";
+import { BackButton } from "@/components/ButtonBack";
 import { useAuth } from "@/providers/AuthProvider";
 
 const Header = () => {
@@ -12,10 +13,13 @@ const Header = () => {
   .replace(/^./, (char) => char.toUpperCase())
 
   return (
-    <HeaderContainer>
-      <TitleComponent as="h1">Olá, {formattedName}!</TitleComponent>
-      <ButtonComponent size="small" onClick={logout}>Logout</ButtonComponent>
-    </HeaderContainer>
+    <>
+      <HeaderContainer>
+        <TitleComponent as="h1">Olá, {formattedName}!</TitleComponent>
+        <ButtonComponent size="small" onClick={logout}>Logout</ButtonComponent>
+      </HeaderContainer>
+      <BackButton />
+    </>
   );
 };
 

@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <Container>
       <div>
-        <Image src={Logo} alt="O Protetor" width={350} height={400} />
+        <Image src={Logo} alt="O Protetor" width={350} height={400} priority />
           <TitleComponent as='h1'>O Protetor</TitleComponent>
       </div>
 
@@ -21,12 +21,12 @@ export default function Home() {
 
       <LinkComponent>
         <ButtonComponent size='small' variant='secondary' fullWidth>
-          <Link href={'/login'}>Login</Link>
+          <Link href={'/login'} target='_self'>Login</Link>
         </ButtonComponent>
 
         <TextComponent as="span">Ainda não possui cadastro?</TextComponent>
         <ButtonComponent size='small' variant='secondary' fullWidth>
-          <Link href={'/register'}>Registre-se</Link>
+          <Link href={'/register'} target='_self'>Registre-se</Link>
         </ButtonComponent>
       </LinkComponent>
     </Container>

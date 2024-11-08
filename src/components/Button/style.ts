@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { ButtonProps } from "@/types";
 
-export const Button = styled.button<ButtonProps>`
+export const Button = styled.button<ButtonProps  & { $variant?: 'primary' | 'secondary'; $fullWidth?: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,7 +30,7 @@ export const Button = styled.button<ButtonProps>`
   border: none;
   border-radius: ${({ theme }) => theme.borderRadius};
   cursor: pointer;
-  width: ${({ fullWidth }) => (fullWidth ? '100%' : '180px')};
+  width: ${({ $fullWidth }) => ($fullWidth ? '100%' : '180px')};
   height: 35px;
   margin-bottom: ${({ theme }) => theme.spacing.medium};
 `;

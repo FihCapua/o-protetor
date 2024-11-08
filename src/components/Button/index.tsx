@@ -9,7 +9,7 @@ export const ButtonComponent: React.FC<ButtonProps> = ({
     onClick,
   }) => {
     return (
-      <Button variant={variant} size={size} fullWidth={fullWidth} onClick={onClick}>
+      <Button $variant={variant} size={size} $fullWidth={fullWidth} onClick={onClick}>
         {children}
       </Button>
     );
