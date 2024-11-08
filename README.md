@@ -96,7 +96,7 @@ git push origin minha-feature
 Abra um Pull Request 🚀
 
 ## 💌 Contato
-Se precisar de ajuda ou tiver qualquer dúvida, fique à vontade para abrir uma 
+Se precisar de ajuda ou tiver qualquer dúvida, fique à vontade para abrir uma issue
 
 Feito com ❤️ por [FihCapua](https://github.com/FihCapua)
 
