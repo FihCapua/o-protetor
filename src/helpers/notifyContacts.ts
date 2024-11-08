@@ -28,7 +28,7 @@ const sendEmergencySMS = async (phoneNumber: string, message: string): Promise<E
     }
   };
 
-export const notifyContacts = async (contacts: ContactProps[], locationInfo: string): Promise<EmailResultProps[]> => {
+export const notifyContacts = async (contacts: ContactProps[], locationInfo: string, senderName: string, senderEmail: string): Promise<EmailResultProps[]> => {
     const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '';
     const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '';
     const USER_ID = process.env.NEXT_PUBLIC_EMAILJS_USER_ID || '';
@@ -44,6 +44,8 @@ export const notifyContacts = async (contacts: ContactProps[], locationInfo: str
           {
             location_info: locationInfo,
             to_email: contact.email,
+            from_name: senderName,
+            from_email: senderEmail
           },
           USER_ID
         )

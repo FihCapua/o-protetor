@@ -56,7 +56,11 @@ export const EmergencyButton = () => {
       };
 
       const sendLocationToContacts = async (contacts: ContactProps[], locationInfo: string) => {
-        const results = await notifyContacts(contacts, locationInfo);
+        const senderName: string = user?.displayName || '';
+        const senderEmail: string = user?.email || '';
+        
+        
+        const results = await notifyContacts(contacts, locationInfo, senderName, senderEmail);
         results.forEach(({ success, contact, error }) => {
             if (success) {
                 console.log(`Informações enviadas para: ${contact}`);
