@@ -4,6 +4,7 @@ import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons'
 import { TextComponent } from '../Typography';
 import { getGeolocationErrorMessage } from '@/helpers/getGeolocationErrorMessage';
 import { getContacts } from '@/services/contactService';
+import { useAuth } from '@/providers/AuthProvider';
 import { notifyContacts } from '@/helpers/notifyContacts';
 import { ContactProps } from '@/types';
 import { getAddressFromCoordinates } from '@/helpers/getAddressFromCoordinates';
@@ -12,6 +13,8 @@ import { EmergencyButtonContainer, StyledEmergencyButton } from './style';
 export const EmergencyButton = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
+
+    const { user } = useAuth();
 
     const showAlert = (message: string) => alert(message);
 
@@ -28,8 +31,13 @@ export const EmergencyButton = () => {
       const onGeolocationSuccess = async (position: GeolocationPosition) => {
         const { latitude, longitude } = position.coords;
 
+        if (!user || !user.uid) {
+            alert("Usuário não autenticado ou ID de usuário não encontrado.");
+            return;
+        }
+
           try {
-              const contacts = await getContacts();
+              const contacts = await getContacts(user.uid);
               if (contacts.length === 0) {
                   showAlert('Nenhum contato de emergência foi encontrado. Por favor, adicione contatos antes de enviar a localização.');
                   return;
@@ -51,9 +59,9 @@ export const EmergencyButton = () => {
         const results = await notifyContacts(contacts, locationInfo);
         results.forEach(({ success, contact, error }) => {
             if (success) {
-                console.log(`E-mail enviado para: ${contact}`);
+                console.log(`Informações enviadas para: ${contact}`);
             } else {
-                console.error(`Erro ao enviar e-mail para ${contact}:`, error);
+                console.error(`Erro ao enviar informações para ${contact}:`, error);
             }
         });
 

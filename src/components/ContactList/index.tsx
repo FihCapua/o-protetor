@@ -2,20 +2,24 @@
 
 import { useEffect, useState } from "react";
 import { getContacts } from "@/services/contactService";
+import { useAuth } from "@/providers/AuthProvider";
 import { ContactProps } from "@/types";
 import { TextComponent, TitleComponent } from "../Typography";
 import { ListContactsContainer, ListDetailsContainer } from "./style";
 
 const ContactList = () => {
     const [contacts, setContacts] = useState<ContactProps[]>([]);
+    const { user } = useAuth();
 
     useEffect(() => {
         const loadContacts = async () => {
-            const contactsList = await getContacts();
-            setContacts(contactsList);
+            if (user && user.uid) {
+                const contactsList = await getContacts(user.uid);
+                setContacts(contactsList);
+            }
         };
         loadContacts();
-    }, []);
+    }, [user]);
 
     return (
         <ListContactsContainer>

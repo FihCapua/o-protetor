@@ -1,5 +1,5 @@
 import { database } from "@/app/firebase/firebaseConfig";
-import { addDoc, collection, getDocs } from "firebase/firestore";
+import { addDoc, collection, getDocs, query, where } from "firebase/firestore";
 import { ContactProps } from "@/types";
 
 /** 
@@ -9,9 +9,10 @@ import { ContactProps } from "@/types";
  *  @param phone - The phone number of the contact.
  */
 
-export const addContact = async (name: string, email: string, phone: string): Promise<void> => {
+export const addContact = async (userId: string, name: string, email: string, phone: string): Promise<void> => {
     try {
         await addDoc(collection(database, 'contacts'), {
+            userId,
             name,
             email,
             phone,
@@ -25,9 +26,12 @@ export const addContact = async (name: string, email: string, phone: string): Pr
     }
 }
 
-export const getContacts = async (): Promise<ContactProps[]> => {
+export const getContacts = async (userId: string): Promise<ContactProps[]> => {
     try {
-        const contactsSnapshot = await getDocs(collection(database, 'contacts'));
+        const contactsRef = collection(database, 'contacts');
+        const q = query(contactsRef, where("userId", "==", userId));
+        const contactsSnapshot = await getDocs(q);
+
         return contactsSnapshot.docs.map(doc => ({
             id: doc.id,
             name: doc.data().name || '',

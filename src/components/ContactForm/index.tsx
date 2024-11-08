@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { addContact } from "@/services/contactService";
+import { useAuth } from "@/providers/AuthProvider";
 import { TitleComponent } from "../Typography";
 import { ContainerContactForm } from "./style";
 import { InputField } from "../Input";
@@ -12,11 +13,18 @@ const ContactForm = () => {
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
 
+    const { user } = useAuth();
+
     
     const handleSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
 
-        await addContact(name, email, phone);
+        if (!user || !user.uid) {
+            alert("Usuário não autenticado ou ID de usuário não encontrado.");
+            return;
+        }
+
+        await addContact(user.uid, name, email, phone);
         setName('');
         setEmail('');
         setPhone('');
