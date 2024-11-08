@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# O Protetor Web App 🏡❤️
 
-## Getting Started
+Bem-vindo ao repositório do O Protetor!
+Este é um projeto criado para oferecer tranquilidade e segurança, sempre ao seu alcance. O objetivo é ajudar os usuários a gerenciar lembretes de medicamentos e fornecer meios fáceis de contato em situações de emergência, utilizando tecnologias modernas e acessíveis.
 
-First, run the development server:
+## 🚀 Sobre o Projeto
 
-```bash
+O Protetor é uma aplicação web desenvolvida com foco na simplicidade e segurança do usuário. Ela permite que você:
+- Cadastre lembretes para tomar medicamentos nos horários certos. ⏰
+- Receba notificações via SMS como lembrete para seus medicamentos. 📩
+- Adicione um número de telefone de emergência para situações de urgência. 🚑
+- Veja dicas diárias sobre saúde, segurança e bem-estar 💡
+- Conheça jogos que estimulam a cognição e ajudam a memória 🧠
+
+## 🥇 Principais Tecnologias Utilizadas
+
+- React/Next.js: Desenvolvimento do front-end.
+- Firebase: Autenticação e banco de dados.
+- Textbelt: API para envio de sms's programados para lembretes e avisos em caso de emergência.
+- EmailJS: API para envio de emails em caso de emergência.
+- Open Street Map: Serviço de mapa para auxiliar com as coordenadas de latitude e longitude.
+
+## 🛠️ Como Configurar e Rodar o Projeto Localmente
+
+Quer colaborar ou testar o projeto? Siga os passos abaixo:
+
+1. Clone o Repositório
+
+```sh
+git clone https://github.com/seu-usuario/o-protetor.git
+cd o-protetor
+```
+2. Instale as Dependências
+
+```sh
+npm install
+```
+3. Configuração do Firebase
+
+Para utilizar os serviços do Firebase, é necessário configurar as credenciais:
+*  1. Crie um projeto no [Firebase Console](https://console.firebase.google.com/) .
+*  2. Crie um arquivo ```.env.local``` na raiz do projeto e adicione as seguintes variáveis:
+
+```
+NEXT_PUBLIC_FIREBASE_API_KEY=YOUR_FIREBASE_API_KEY
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=YOUR_FIREBASE_AUTH_DOMAIN
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=YOUR_FIREBASE_PROJECT_ID
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=YOUR_FIREBASE_STORAGE_BUCKET
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=YOUR_FIREBASE_MESSAGING_SENDER_ID
+NEXT_PUBLIC_FIREBASE_APP_ID=YOUR_FIREBASE_APP_ID
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=YOUR_EMAILJS_SERVICE_ID
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=YOUR_EMAILJS_TEMPLATE_ID
+NEXT_PUBLIC_EMAILJS_USER_ID=YOUR_EMAILJS_USER_ID
+NEXT_PUBLIC_NOMINATIM_BASE_URL=YOUR_NOMINATIM_BASE_URL
+NEXT_PUBLIC_TEXT_BELT_BASE_URL=YOUR_TEXT_BELT_BASE_URL
+TEXTBELT_KEY=YOUR_TEXTBELT_API_KEY
+```
+4.  Inicialize o Firebase Functions
+Para configurar as funções do Firebase:
+```
+cd functions
+npm install
+firebase deploy --only functions
+```
+5.  Inicie o projeto
+
+Agora, é só iniciar o servidor local:
+```
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+O projeto estará disponível em: [http://localhost:3000](http://localhost:3000.).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔗 Links Úteis
+[Firebase Console](https://console.firebase.google.com/)
+[Documentação do TextBelt](https://textbelt.com/)
+[Documentação OpenStreetMap](https://www.openstreetmap.org/)
+[Documentação EmailJS](https://www.emailjs.com/docs/)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 🌱 Como Contribuir
+Ficamos felizes com sua ajuda para melhorar este projeto! Siga os passos abaixo para contribuir:
 
-## Learn More
+Faça um fork do repositório.
+Crie uma nova branch com sua feature ou correção:
+```
+git checkout -b minha-feature
+```
+Faça o commit das suas mudanças:
+```
+git commit -m 'Adiciona minha feature'
+```
+Faça o push para a branch:
+```
+git push origin minha-feature
+```
+Abra um Pull Request 🚀
 
-To learn more about Next.js, take a look at the following resources:
+## 💌 Contato
+Se precisar de ajuda ou tiver qualquer dúvida, fique à vontade para abrir uma 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Feito com ❤️ por [FihCapua](https://github.com/FihCapua)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
