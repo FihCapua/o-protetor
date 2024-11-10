@@ -9,6 +9,11 @@ const sendEmergencySMS = async (phoneNumber: string, message: string): Promise<E
     const countryCode = "+55"
     const formattedPhoneNumber = countryCode + phoneNumber;
 
+    if (!apiKey) {
+      console.error("Chave da API Textbelt não foi encontrada!");
+      return { success: false, contact: phoneNumber, error: "Chave da API Textbelt não foi encontrada!" };
+  }
+
     const data = {
         phone: formattedPhoneNumber,
         message: message,

@@ -23,6 +23,11 @@ const Login = () => {
       event.preventDefault()
       setError('')
       setMessage('')
+
+      if (!auth) {
+        setError("Erro ao inicializar o serviço de autenticação.");
+        return;
+      }
   
       try {
         await signInWithEmailAndPassword(auth, email, password)

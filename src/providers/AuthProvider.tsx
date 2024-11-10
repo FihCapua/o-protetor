@@ -18,37 +18,43 @@ export const AuthProvider = ({ children }: {children: React.ReactNode}) => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
-            if (currentUser) {
-                try {
-                    const userDocRef = doc(database, "users", currentUser.uid);
-                    const userDoc = await getDoc(userDocRef);
+        if (auth) {
+            const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+                if (currentUser) {
+                    try {
+                        if (database) {
+                            const userDocRef = doc(database, "users", currentUser.uid);
+                            const userDoc = await getDoc(userDocRef);
 
-                    if (userDoc.exists()) {
-                        const additionalData = userDoc.data();
-                        setUser({
-                            ...currentUser,
-                            name: additionalData.name || "",
-                            phoneNumber: additionalData.phoneNumber || null,
-                        });
-                    } else {
+                            if (userDoc.exists()) {
+                                const additionalData = userDoc.data();
+                                setUser({
+                                    ...currentUser,
+                                    name: additionalData.name || "",
+                                    phoneNumber: additionalData.phoneNumber || null,
+                                });
+                            } else {
+                                setUser(currentUser);
+                            }
+                        }
+                    } catch (error) {
+                        console.error("Erro ao buscar dados do usuário no Firestore:", error);
                         setUser(currentUser);
                     }
-                } catch (error) {
-                    console.error("Erro ao buscar dados do usuário no Firestore:", error);
-                    setUser(currentUser);
+                } else {
+                    setUser(null);
                 }
-            } else {
-                setUser(null);
-            }
-            setLoading(false);
-        });
+                setLoading(false);
+            });
 
-        return () => unsubscribe();
+            return () => unsubscribe();
+        }
     }, []);
 
     const logout = async () => {
-        await signOut(auth);
+        if (auth) {
+            await signOut(auth);
+        }
     };
 
     return (
@@ -56,12 +62,16 @@ export const AuthProvider = ({ children }: {children: React.ReactNode}) => {
             {!loading && children}
         </AuthContext.Provider>
     );
-}
+};
 
 export const useAuth = () => {
     const context = useContext(AuthContext);
     if (!context) {
-      throw new Error("useAuth must be used within an AuthProvider");
+        throw new Error("useAuth must be used within an AuthProvider");
     }
-    return context as { user: UserWithPhoneNumber | null; logout: () => void; loading: boolean };
-  };
+    return context as {
+        user: UserWithPhoneNumber | null;
+        logout: () => void;
+        loading: boolean;
+    };
+};

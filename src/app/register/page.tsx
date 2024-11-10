@@ -35,6 +35,17 @@ const AuthClient = () => {
         setError('');
         setMessage('');
 
+        if (!auth) {
+          setError("Erro ao inicializar o serviço de autenticação.");
+          return;
+        }
+
+        if (!database) {
+          setError("Erro ao inicializar o Firestore.");
+          return;
+        }
+    
+
         try {
             const userCredential = await createUserWithEmailAndPassword(auth, email, password);
             const user = userCredential.user;

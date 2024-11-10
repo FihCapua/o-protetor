@@ -3,6 +3,11 @@ import { collection, query, where, getDocs, doc, setDoc } from "firebase/firesto
 import { MedicationProps } from "@/types";
 
 export const addMedicationReminder = async (userId: string, medication: MedicationProps) => {
+    if (!database) {
+        console.error("Erro ao inicializar o serviço de banco de dados.");
+        return;
+    }
+    
   const medicationDocRef = doc(collection(database, "medications"));
   await setDoc(medicationDocRef, {
       ...medication,
@@ -14,6 +19,11 @@ export const addMedicationReminder = async (userId: string, medication: Medicati
 export const getMedications = async (userId: string): Promise<MedicationProps[]> => {
     if (!userId) {
         console.error("userId está indefinido.");
+        return [];
+    }
+
+    if (!database) {
+        console.error("Erro ao inicializar o serviço de banco de dados.");
         return [];
     }
     

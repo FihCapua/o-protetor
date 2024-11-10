@@ -19,6 +19,7 @@ export const EmergencyButton = () => {
     const showAlert = (message: string) => alert(message);
 
       const handleEmergencyClick = () => {
+            console.log("Botão clicado!");
           if (!navigator.geolocation) {
             showAlert('Geolocalização não é suportada no seu navegador.');
             return;
@@ -44,7 +45,7 @@ export const EmergencyButton = () => {
               }
 
               const address = await getAddressFromCoordinates(latitude, longitude);
-              const locationInfo = address || `Latitude: ${latitude}, Longitude: ${longitude}`;
+              const locationInfo = address || "Endereço não encontrado";
 
               await sendLocationToContacts(contacts, locationInfo);
           } catch (error) {

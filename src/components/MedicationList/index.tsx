@@ -12,6 +12,11 @@ export const MedicationList = () => {
 
     useEffect(() => {
         const fetchMedications = async () => {
+            if (!auth || !auth.currentUser) {
+                console.error("Usuário não autenticado ou serviço de autenticação não inicializado.");
+                return;
+            }
+            
             const userId = auth.currentUser?.uid;
             if (userId) {
                 const medicationList = await getMedications(userId);
