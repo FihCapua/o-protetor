@@ -20,14 +20,18 @@ export default function Home() {
       </div>
 
       <LinkComponent>
-        <ButtonComponent size='small' variant='secondary' fullWidth>
-          <Link href={'/login'} target='_self'>Login</Link>
-        </ButtonComponent>
+        <Link href={'/login'} target='_self'>
+          <ButtonComponent size='medium' variant='secondary' fullWidth>
+            Login
+          </ButtonComponent>
+        </Link>
 
         <TextComponent as="span">Ainda não possui cadastro?</TextComponent>
-        <ButtonComponent size='small' variant='secondary' fullWidth>
-          <Link href={'/register'} target='_self'>Registre-se</Link>
-        </ButtonComponent>
+        <Link href={'/register'} target='_self'>
+          <ButtonComponent size='medium' variant='secondary' fullWidth>
+            Registre-se
+          </ButtonComponent>
+        </Link>
       </LinkComponent>
     </Container>
   )

@@ -36,6 +36,7 @@ export const LinkComponent = styled.div`
         text-decoration: none;
         color: ${({ theme }) => theme.colors.buttonText};
         cursor: pointer;
+        width: 100%;
     }
 
     @media (max-width: 768px) {

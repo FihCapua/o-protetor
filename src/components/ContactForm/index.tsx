@@ -40,7 +40,7 @@ const ContactForm = () => {
                         <InputField type="email" value={email} placeholder="Email" onChange={(e) => setEmail(e.target.value)} required />
                     
                         <InputField value={phone} placeholder="Telefone" onChange={(e) => setPhone(e.target.value)} />
-                    <ButtonComponent size="small" fullWidth>Adicionar Contato</ButtonComponent>
+                    <ButtonComponent size="medium" fullWidth>Adicionar Contato</ButtonComponent>
                 </form>
             </ContainerContactForm>
         </>

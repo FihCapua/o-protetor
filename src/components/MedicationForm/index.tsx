@@ -100,7 +100,7 @@ export const MedicationForm = () => {
                         onChange={(e) => setTime(e.target.value)}
                         required
                     />
-                    <ButtonComponent size="small" fullWidth>Adicionar Lembrete</ButtonComponent>
+                    <ButtonComponent size="medium" fullWidth>Adicionar Lembrete</ButtonComponent>
                 </form>
             </ContainerMedicamentForm>
         </>

@@ -24,7 +24,7 @@ export const Button = styled.button<ButtonProps  & { $variant?: 'primary' | 'sec
       case 'large':
         return theme.fontSizes.large;
       default:
-        return theme.fontSizes.medium;
+        return theme.fontSizes.small;
     }
   }};
   border: none;

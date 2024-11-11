@@ -63,7 +63,7 @@ const Login = () => {
           />
           {error && <ErrorMessage>{error}</ErrorMessage>}
           {message && <SuccessMessage>{message}</SuccessMessage>}
-          <ButtonComponent size='small' variant='secondary' fullWidth>Entrar</ButtonComponent>
+          <ButtonComponent size='medium' variant='secondary' fullWidth>Entrar</ButtonComponent>
         </Form>
       </Container>
     )

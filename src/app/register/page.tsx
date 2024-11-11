@@ -109,7 +109,7 @@ const AuthClient = () => {
           />
         {error && <ErrorMessage>{error}</ErrorMessage>}
         {message && <SuccessMessage>{message}</SuccessMessage>}
-        <ButtonComponent fullWidth size="small">Registrar-se</ButtonComponent>
+        <ButtonComponent fullWidth size="medium">Registrar-se</ButtonComponent>
       </Form>
     </Container>
       );

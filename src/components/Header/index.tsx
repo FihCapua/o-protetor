@@ -16,7 +16,7 @@ const Header = () => {
     <>
       <HeaderContainer>
         <TitleComponent as="h1">Olá, {formattedName}!</TitleComponent>
-        <ButtonComponent size="small" onClick={logout}>Logout</ButtonComponent>
+        <ButtonComponent size="medium" onClick={logout}>Logout</ButtonComponent>
       </HeaderContainer>
       <BackButton />
     </>
