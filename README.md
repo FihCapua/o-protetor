@@ -73,8 +73,11 @@ O projeto estará disponível em: [http://localhost:3000](http://localhost:3000.
 
 ## 🔗 Links Úteis
 [Firebase Console](https://console.firebase.google.com/)
+
 [Documentação do TextBelt](https://textbelt.com/)
+
 [Documentação OpenStreetMap](https://www.openstreetmap.org/)
+
 [Documentação EmailJS](https://www.emailjs.com/docs/)
 
 ## 🌱 Como Contribuir
